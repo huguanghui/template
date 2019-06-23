@@ -1,6 +1,8 @@
 " 管理兼容模式
 set nocompatible
 
+filetype off
+
 " 设置历史记录数
 set history=10000
 
@@ -51,13 +53,79 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+"键盘命令
+nmap <leader>w :w!<CR>
+nmap <leader>f :find<CR>
+
 " 映射按键
 map S :w<CR>
 map Q :q<CR>
 map R :source $MYVIMRC<CR>
+map <F3> :tabnew .<CR>
+
+filetype plugin on
+
+let g:ycm_server_python_interpreter='/usr/bin/python'
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+
+let g:ycm_show_diagnostics_ui = 0 
+
+"在注释输入中也能补全
+let g:ycm_complete_in_comments = 1
+
+"在字符串输入中也能补全
+let g:ycm_complete_in_strings = 1
+
+"注释和字符串中的文字也会被收入补全
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
+
+"从2个键入字符开始罗列匹配项
+let g:ycm_min_num_of_chars_for_completion=2
+
+"禁止缓存匹配项
+let g:ycm_cache_omnifunc=0
+
+"语法关键字补全
+let g:ycm_seed_identifiers_with_syntax=1
+
+"让YouCompleteMe同时利用原来的ctags
+let g:ycm_collect_identifiers_from_tag_files = 1
+
+"跳转到定义处
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> 
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
+Plug 'vim-scripts/gtags.vim'
+Plug 'tranngocthachs/gtags-cscope-vim-plugin'
+Plug 'vim-scripts/taglist.vim'
 
 call plug#end()
+
+set cscopetag " 使用 cscope 作为 tags 命令
+set cscopeprg='gtags-cscope' " 使用 gtags-cscope 代替 cscope
+
+"gtags.vim 设置项
+let GtagsCscope_Auto_Load = 1
+let CtagsCscope_Auto_Map = 1
+let GtagsCscope_Quiet = 1
+
+filetype on
+
+" 自动补全
+:inoremap ( ()<ESC>i
+:inoremap ) <c-r>=ClosePair(')')<CR>
+
+:inoremap { {<CR>}<ESC>O
+:inoremap } <c-r>=ClosePair('}')<CR>
+
+:inoremap [ []<ESC>i
+:inoremap ] <c-r>=ClosePair(']')<CR>
+
+:inoremap " ""<ESC>i
+:inoremap ' ''<ESC>i
+
+filetype plugin indent on
+set completeopt=longest,menu
