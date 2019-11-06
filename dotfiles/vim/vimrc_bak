@@ -1,0 +1,163 @@
+" 管理兼容模式
+set nocompatible
+
+filetype off
+
+" 设置历史记录数
+set history=10000
+
+set autoread
+
+" 显示相关
+set cul
+
+" 缩进相关
+set autoindent
+set cindent
+
+" 设置Tab宽度
+set tabstop=4
+set shiftwidth=4 
+" 使用空格代替制表符
+set expandtab
+" 在行开始的地方使用制表符
+set smarttab
+" 显示行数
+set number
+set numberwidth=4
+
+" 搜索逐字符高亮
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" 语言设置
+set langmenu=zh_CN.UTF-8
+let &termencoding=&encoding
+set fileencodings=utf-8,gbk,ucs-bom,cp936
+set helplang=cn
+" 总是显示状态行
+set cmdheight=2
+
+set showcmd
+set wildmenu
+set wildignore=*.o,*.obj,*.dll,*.exe,*~,*.pyc
+
+" 长于窗口长度自动换行
+set wrap
+
+" 保留10行的滚动区间
+set scrolloff=10
+
+" 关闭备份
+set nobackup
+set nowritebackup
+set noswapfile
+
+"键盘命令
+nmap <leader>w :w!<CR>
+nmap <leader>f :find<CR>
+
+" 映射按键
+map S :w<CR>
+map Q :q<CR>
+map R :source $MYVIMRC<CR>
+map <F3> :tabnew .<CR>
+
+filetype plugin on
+
+let g:ycm_server_python_interpreter='/usr/bin/python'
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+
+"停止提示是否载入本地 ycm_extra_conf 文件
+let g:ycm_confirm_extra_conf = 0
+
+let g:ycm_show_diagnostics_ui = 0 
+
+"停止弹出函数原型
+set completeopt=menu,menuone
+let g:ycm_add_preview_to_completeopt=0
+
+"在注释输入中也能补全
+let g:ycm_complete_in_comments = 1
+
+"在字符串输入中也能补全
+let g:ycm_complete_in_strings = 1
+
+"注释和字符串中的文字也会被收入补全
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
+
+"从2个键入字符开始罗列匹配项
+let g:ycm_min_num_of_chars_for_completion = 2
+let g:ycm_min_num_indentifiers_candiate_chars = 2
+
+"禁止缓存匹配项
+let g:ycm_cache_omnifunc=0
+
+"语法关键字补全
+let g:ycm_seed_identifiers_with_syntax=1
+
+"让YouCompleteMe同时利用原来的ctags
+let g:ycm_collect_identifiers_from_tag_files = 1
+
+"设置出发补全快捷键
+"let g:ycm_key_invoke_completion='<c-z>'
+
+noremap <c-z> <nop>
+
+let g:ycm_semantic_triggers = {
+    \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+    \ 'cs,lua,javascript': ['re!\w{2}'],
+    \}
+
+let g:ycm_filetype_whitelist = {
+    \ "c":1,
+    \ "cpp":1,
+    \ "objc":1,
+    \ "sh":1,
+    \ "zsh":1,
+    \ "zimbu":1,
+    \}
+
+let g:UltiSnipsExpandTrigger='<c-z>'
+let g:UltiSnipsListSnippets='<c-l>'
+let g:UltiSnipsJumpForwardTrigger='<c-j>'
+let g:UltiSnipsJumpBackwardTrigger='<c-k>'
+let g:UlitSnipsEditSplit='vertical'
+
+"跳转到定义处
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> 
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'Valloric/YouCompleteMe', {'on': []}
+augroup load_ycm
+    autocmd!
+    autocmd InsertEnter * call plug#load('YouCompleteMe') | autocmd! load_ycm
+augroup END
+Plug 'rdnetto/ycm-generator', {'branch': 'stable'}
+Plug 'vim-scripts/gtags.vim'
+Plug 'tranngocthachs/gtags-cscope-vim-plugin'
+Plug 'vim-scripts/taglist.vim'
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
+
+call plug#end()
+
+set cscopetag " 使用 cscope 作为 tags 命令
+set cscopeprg='gtags-cscope' " 使用 gtags-cscope 代替 cscope
+
+"gtags.vim 设置项
+let GtagsCscope_Auto_Load = 1
+let CtagsCscope_Auto_Map = 1
+let GtagsCscope_Quiet = 1
+
+filetype on
+
+:inoremap " ""<ESC>i
+:inoremap ' ''<ESC>i
+
+filetype plugin indent on
+set completeopt=longest,menu
