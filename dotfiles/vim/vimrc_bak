@@ -1,8 +1,6 @@
 " 管理兼容模式
 set nocompatible
 
-filetype off
-
 " 设置历史记录数
 set history=10000
 
@@ -25,6 +23,9 @@ set smarttab
 " 显示行数
 set number
 set numberwidth=4
+
+" 显示相对行号
+set relativenumber
 
 " 搜索逐字符高亮
 set hlsearch
@@ -64,8 +65,6 @@ map S :w<CR>
 map Q :q<CR>
 map R :source $MYVIMRC<CR>
 map <F3> :tabnew .<CR>
-
-filetype plugin on
 
 let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
@@ -129,6 +128,66 @@ let g:UlitSnipsEditSplit='vertical'
 "跳转到定义处
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> 
 
+" 设置搜索工程的标志
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
+
+" 所生成的数据文件名称
+let g:gutentags_ctags_tagfile = '.tags'
+
+" 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中, 避免目录污染
+let s:vim_tags = expand('~/.cache/tags')
+let g:gutentags_cache_dir = s:vim_tags
+
+if !isdirectory(s:vim_tags)
+    silent! call mkdir (s:vim_tags, 'p')
+endif
+
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extras=+q']
+let g:gutentags_ctags_extra_args = ['--c++-kinds=+pxI']
+let g:gutentags_ctags_extra_args = ['--c-kinds=+px']
+
+" cscope + ctags的使用
+if has("cscope")
+    " 对于ctrl+] :ta和vim -t命令同时使用cscope和ctags命令
+    set cscopetag 
+    set csto=0
+    if filereadable("cscope.out")
+        cs add cscope.out
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+    " 当其他的cscope数据库添加时显示消息
+    set cscopeverbose
+    " 按键映射
+    " 查看模型
+    nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+    " 查看定义
+    nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+    " 查看调用
+    nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+    " 查找文本
+    nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+    " 使用egrep查询
+    nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+    " 打开当前选中的文件
+    nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+    " 查询include当前选中的文件
+    nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    " 查询当前选中函数调用的所有函数
+    nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+endif
+
+" 使用cscope作为tags命令
+"set cscopetag
+" 使用gtags-cscope代替cscope
+"set cscopeprg='gtags-cscope'
+
+" 相关配置
+"let g:GtagsCscope_Auto_Load = 1
+"let g:GtagsCscope_Auto_Map = 1
+"let g:GtagsCscope_Quiet = 1
+
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
@@ -138,26 +197,21 @@ augroup load_ycm
     autocmd InsertEnter * call plug#load('YouCompleteMe') | autocmd! load_ycm
 augroup END
 Plug 'rdnetto/ycm-generator', {'branch': 'stable'}
-Plug 'vim-scripts/gtags.vim'
-Plug 'tranngocthachs/gtags-cscope-vim-plugin'
+Plug 'ludovicchabant/vim-gutentags'
+"Plug 'vim-scripts/gtags.vim'
+"Plug 'tranngocthachs/gtags-cscope-vim-plugin'
 Plug 'vim-scripts/taglist.vim'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 
 call plug#end()
 
-set cscopetag " 使用 cscope 作为 tags 命令
-set cscopeprg='gtags-cscope' " 使用 gtags-cscope 代替 cscope
-
-"gtags.vim 设置项
-let GtagsCscope_Auto_Load = 1
-let CtagsCscope_Auto_Map = 1
-let GtagsCscope_Quiet = 1
-
-filetype on
-
-:inoremap " ""<ESC>i
+":inoremap " ""<ESC>i
 :inoremap ' ''<ESC>i
 
 filetype plugin indent on
 set completeopt=longest,menu
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+let Tlist_Show_One_File = 1
+let Tlist_Exit_OnlyWindow = 1
+map <silent> <F9> :TlistToggle<CR>
