@@ -228,3 +228,13 @@ https://github.com/avelino/awesome-go
  ******************************************************************************/
 https://github.com/a8m/go-lang-cheat-sheet
 https://github.com/LeCoupa/awesome-cheatsheets
+
+/*******************************************************************************
+ * 代码风格
+ ******************************************************************************/
+ // uber 的代码风格
+ https://github.com/uber-go/guide/blob/master/style.md
+ // go 的相关资讯
+ https://github.com/gocn
+ // go 的知识图谱
+ https://www.processon.com/view/link/5a9ba4c8e4b0a9d22eb3bdf0#map
