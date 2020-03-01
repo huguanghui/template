@@ -1,0 +1,27 @@
+HGH_MAKEFILE=$HGH_OBJS/Makefile
+HGH_MODULES_C=$HGH_OBJS/hgh_modules.c
+
+HGH_AUTO_HEADERS_H=$HGX_OBJS/hgh_auto_headers.h
+HGH_AUTO_CONFIG_H=$HGH_OBJS/hgh_auto_config.h
+
+HGH_AUTOTEST=$HGH_OBJS/autotest
+HGH_AUTOCONF_ERR=$HGH_OBJS/autoconf.err
+
+# STUBs
+HGH_ERR=$HGH_OBJS/autoconf.err
+MAKEFILE=$HGH_OBJS/Makefile
+
+# check the echo's "-n" option add "\c" capability
+
+if echo "test\c" | grep c >/dev/null; then
+    if echo -n test | grep n >/dev/null; then
+        hgh_n=
+        hgh_c=
+    else
+        hgh_n=-n
+        hgh_c=
+    fi
+else
+    hgh_n=
+    hgh_c='\c'
+fi

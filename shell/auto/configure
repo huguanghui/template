@@ -1,0 +1,29 @@
+#!/bin/sh
+
+LC_ALL=C
+export LC_ALL
+
+. auto/options
+. auto/init
+
+test -d $HGH_OBJS || mkdir -p $HGH_OBJS
+
+if [ $HGH_DEBUG = YES ]; then
+    have=HGH_DEBUG . auto/have
+fi
+
+have=HGH_SBIN_PATH value="\"$HGH_SBIN_PATH\"" . auto/define
+
+. auto/headers
+
+hgh_feature="gcc variadic macros"
+hgh_feature_name="HGH_HAVE_GCC_VARIADIC_MACROS"
+hgh_feature_run=yes
+hgh_feature_incs="#include <stdio.h>
+#define var(dummy, args...) sprintf(args)"
+hgh_feature_path=
+hgh_feature_libs=
+hgh_feature_test="char  buf[30]; buf[0] = '0';
+                  var(0, buf, \"%d\", 1);
+                  if (buf[0] != '1') return 1"
+. auto/feature

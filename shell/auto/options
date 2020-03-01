@@ -1,0 +1,41 @@
+help=no
+
+CC=${CC:-cc}
+CPP=
+HGH_OBJS=objs
+
+HGH_DEBUG=YES
+
+HGH_SBIN_PATH=${HGH_SBIN_PATH:-sbin/nginx}
+
+opt=
+
+for option
+do
+    opt="$opt `echo $option | sed -e \"s/\(--[^=]*=\)\(.*.*\)/\1'\2'/\"`"
+
+    case "$option" in
+        -*=*) value=`echo "$option" | sed -e 's/[-_a-zA-Z0-9]*=//'` ;;
+           *) value="" ;;
+    esac
+
+    case "$option" in
+        --help)                 help=yes            ;; 
+        *)
+            echo "$0: error: invalid option \"$option\""
+            exit 1
+        ;;
+    esac
+done
+
+HGH_CONFIGURE="$opt"
+
+if [ $help = yes ]; then
+
+cat << END
+
+    --help                          print this message
+
+END
+    exit 1
+fi
