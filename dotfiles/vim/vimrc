@@ -1,9 +1,9 @@
 " 管理兼容模式
 set nocompatible
 
-
 " 设置历史记录数
 set history=10000
+
 set clipboard=unnamedplus
 
 set autoread
@@ -28,6 +28,7 @@ set numberwidth=4
 
 " 显示相对行号
 set relativenumber
+
 " 搜索逐字符高亮
 set hlsearch
 set incsearch
@@ -67,6 +68,7 @@ noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
+
 nmap <leader>w :w!<CR>
 nmap <leader>f :find<CR>
 vmap <leader>c "+y
@@ -127,7 +129,6 @@ let g:ycm_semantic_triggers = {
 
 let g:ycm_filetype_whitelist = {
     \ "c":1,
-    \ "cc":1,
     \ "cpp":1,
     \ "objc":1,
     \ "sh":1,
@@ -141,21 +142,27 @@ let g:UltiSnipsListSnippets='<c-l>'
 let g:UltiSnipsJumpForwardTrigger='<c-j>'
 let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 let g:UlitSnipsEditSplit='vertical'
+
 "跳转到定义处
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> 
 " 设置搜索工程的标志
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
+
 " 所生成的数据文件名称
 let g:gutentags_ctags_tagfile = '.tags'
+
 " 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中, 避免目录污染
 let s:vim_tags = expand('~/.cache/tags')
 let g:gutentags_cache_dir = s:vim_tags
+
 if !isdirectory(s:vim_tags)
     silent! call mkdir (s:vim_tags, 'p')
 endif
+
 let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extras=+q']
 let g:gutentags_ctags_extra_args = ['--c++-kinds=+pxI']
 let g:gutentags_ctags_extra_args = ['--c-kinds=+px']
+
 if has ("cscope")
     " 设置cscope和ctags对ctrl+] :ta和vim -t的兼容
     set cscopetag
@@ -167,24 +174,15 @@ if has ("cscope")
     elseif $CSCOPE_DB != ""
         cs add $CSCOPE_DB
     endif
-    " 当其他的cscope数据库添加时显示消息
+    " 显示信息当其他的cscope数据库被添加
     set cscopeverbose
-    " 按键映射
-    " 查看模型
     nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-    " 查看定义
     nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-    " 查看调用
     nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-    " 查找文本
     nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-    " 使用egrep查询
     nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-    " 打开当前选中的文件
     nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-    " 查询include当前选中的文件
     nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-    " 查询当前选中函数调用的所有函数
     nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 endif
 
@@ -201,22 +199,14 @@ Plug 'ludovicchabant/vim-gutentags'
 "Plug 'vim-scripts/gtags.vim'
 "Plug 'tranngocthachs/gtags-cscope-vim-plugin'
 Plug 'vim-scripts/taglist.vim'
-Plug 'sirver/ultisnips'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'sirver/ultisnips' 
 Plug 'honza/vim-snippets' 
 Plug 'fatih/vim-go', {'do': 'GoUpdateBinaries'}
-"Plug 'skywind3000/vim-keysound'
+Plug 'scrooloose/nerdtree' 
 
-"if has('nvim')
-"    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
-"else
-"    Plug 'Shougo/deoplete.nvim'
-"    Plug 'roxma/nvim-yarp'
-"    Plug 'roxma/vim-hug-neovim-rpc'
-"endif
 call plug#end()
 
 "set cscopetag " 使用 cscope 作为 tags 命令
@@ -238,14 +228,21 @@ let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_Show_One_File = 1 
 let Tlist_Exit_OnlyWindow = 1 
 map <silent> <F9> :TlistToggle<CR>
+
 "vim-markdown 配置项
 let vim_markdown_toc_autofit = 1
 let vim_markdown_follow_anchor = 1
+
 "editorconfig 配置项
 let EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
+
 "deoplete 配置项
 let g:deoplete#enable_at_startup = 1
-"let g:keysound_enable = 1
-"let g:keysound_theme = 'default'
-"let g:keysound_py_version = 3
-"let g:keysound_volume = 500
+
+" nerdtree 配置项
+let NERDTreeWinPos="right"
+" 当打开 NERDTree 窗口时, 自动显示 Bookmarks
+let NERDTreeShowBookmarks=1
+
+map <F3> :NERDTreeMirror<CR>
+map <F3> :NERDTreeToggle<CR>
