@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
-CROSS_COMPILE_PREFIX=arm-himix200-linux
+#CROSS_COMPILE_PREFIX=arm-himix200-linux
+CROSS_COMPILE_PREFIX=
 PREFIX_DIR=$(pwd)/../target/
 
 #rm -rf ${PREFIX_DIR}
@@ -14,9 +15,10 @@ PREFIX_DIR=$(pwd)/../target/
     --enable-static \
     --enable-tlsv10 \
     --enable-debug \
-    build=${CROSS_COMPILE_PREFIX} \
-    --host=${CROSS_COMPILE_PREFIX} 
-    CC=${CROSS_COMPILE_PREFIX}-gcc \
+#    build=${CROSS_COMPILE_PREFIX} \
+#    --host=${CROSS_COMPILE_PREFIX} 
+#    --enable-debug \
+#    CC=${CROSS_COMPILE_PREFIX}-gcc \
 # --enable-debug 
 
 make;

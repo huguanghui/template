@@ -3,9 +3,9 @@
 echo "cross compile ..."
 ROOT_PATH=`pwd`
 PREFIX=$ROOT_PATH/Build_Lib
-CROSS_COMPILE_HOST=arm-himix200-linux
-STRIP=${CROSS_COMPILE_HOST}-strip
-CC=${CROSS_COMPILE_HOST}-gcc
+#CROSS_COMPILE_HOST=arm-himix200-linux
+#STRIP=${CROSS_COMPILE_HOST}-strip
+#CC=${CROSS_COMPILE_HOST}-gcc
 
 ZLIB_URL=http://prdownloads.sourceforge.net/libpng/zlib-1.2.11.tar.gz
 ZLIB_PACKAGE=zlib-1.2.11.tar.gz
@@ -72,13 +72,36 @@ mkdir -p $PREFIX
 make clean
 make distclean
 
+#./configure \
+#    --prefix=$PREFIX \
+#    --enable-static \
+#    --enable-shared=no \
+#    --host=$CROSS_COMPILE_HOST \
+#    --target=$CROSS_COMPILE_HOST \
+#    --with-cyassl=$ROOT_PATH/$WOLFSSL_DIR \
+#    --enable-nonblocking \
+#    --disable-tftp \
+#    --disable-telnet \
+#    --disable-manual \
+#    --enable-file \
+#    --without-libssh2 \
+#    --without-random \
+#    --without-nss \
+#    --without-ca-bundle \
+#    --without-libidn \
+#    --disable-ipv6 \
+#    --disable-largefile \
+#    --enable-debug \
+#    --enable-curldebug
+
 ./configure \
     --prefix=$PREFIX \
     --enable-static \
     --enable-shared=no \
-    --host=$CROSS_COMPILE_HOST \
-    --target=$CROSS_COMPILE_HOST \
+    --disable-largefile \
+    --without-ssl \
     --with-cyassl=$ROOT_PATH/$WOLFSSL_DIR \
+    --without-zlib \
     --enable-nonblocking \
     --disable-tftp \
     --disable-telnet \
@@ -91,8 +114,7 @@ make distclean
     --without-libidn \
     --disable-ipv6 \
     --disable-largefile \
-    --enable-debug \
-    --enable-curldebug
+    --enable-debug 
 
 # 5.补充宏
 
