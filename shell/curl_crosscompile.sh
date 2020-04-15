@@ -15,7 +15,7 @@ CURL_PACKAGE=curl-7.49.1.tar.gz
 CURL_DIR=curl-7.49.1
 
 WOLFSSL_URL=https://sourceforge.net/projects/wolfssl/files/v3.15.3-stable/wolfSSL%20release%20version%203.15.3.tar.gz
-WOLFSSL_DIR=wolfssl-3.15.3/target
+WOLFSSL_DIR=target
 
 OPENSSL_URL=https://www.openssl.org/source/openssl-1.1.1d.tar.gz
 OPENSSL_PACKAGE=openssl-1.1.1d.tar.gz
@@ -69,8 +69,8 @@ if [ -d $PREFIX ]; then
     rm -rf $PREFIX
 fi
 mkdir -p $PREFIX
-make clean
-make distclean
+#make clean
+#make distclean
 
 #./configure \
 #    --prefix=$PREFIX \
@@ -102,6 +102,10 @@ make distclean
     --without-ssl \
     --with-cyassl=$ROOT_PATH/$WOLFSSL_DIR \
     --without-zlib \
+    --without-librtsp \
+    --without-librtmp \
+    --without-nghttp2 \
+    --without-ldap \
     --enable-nonblocking \
     --disable-tftp \
     --disable-telnet \
@@ -119,5 +123,5 @@ make distclean
 # 5.补充宏
 
 # Build
-make;
-make install
+#make;
+#make install
