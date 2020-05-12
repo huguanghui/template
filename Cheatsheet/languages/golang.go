@@ -150,6 +150,10 @@ p3 := new(People)
 p3.Age = 25
 p3.name = "Kaven"
 
+// 打印变量类型
+// import "reflect"
+fmt.Println(reflect.TypeOf(os.Args))
+
 
 /*******************************************************************************
  * 方法

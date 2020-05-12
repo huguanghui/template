@@ -200,6 +200,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
+Plug 'majutsushi/tagbar'
+Plug 'Blackrush/vim-gocode'
 
 call plug#end()
 
@@ -232,6 +234,8 @@ let NERDTreeShowBookmarks=1
 
 map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
+imap <F6> <C-x><C-o>
 
 nnoremap <silent> <Leader>ag :Ack! <C-R><C-W><CR>
 nnoremap <silent> <c-p> :Files <CR>
