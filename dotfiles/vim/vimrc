@@ -239,3 +239,4 @@ imap <F6> <C-x><C-o>
 
 nnoremap <silent> <Leader>ag :Ack! <C-R><C-W><CR>
 nnoremap <silent> <c-p> :Files <CR>
+nnoremap <silent> <c-e> :Buffers <CR>
