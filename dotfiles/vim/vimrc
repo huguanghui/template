@@ -202,6 +202,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Blackrush/vim-gocode'
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
