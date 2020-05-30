@@ -203,6 +203,7 @@ Plug 'mileszs/ack.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Blackrush/vim-gocode'
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
