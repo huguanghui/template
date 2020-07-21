@@ -84,6 +84,12 @@ nnoremap <leader>g :grep <c-r><c-w> */**<cr>
 
 filetype plugin on
 
+"disable ycm 语法检测
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
+"ycmd setting
+let g:ycm_error_symbol = 'K'
+let g:ycm_warning_symbol = 'O'
 let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 "停止提示是否载入本地 ycm_extra_conf 文件
@@ -196,6 +202,11 @@ let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+"文件内容发生变化时不进行检查
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 1
+let g:airline#extensions#ale#enabled = 1
+
 "普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
 nmap sp <Plug>(ale_previous_wrap)
 nmap sn <Plug>(ale_next_wrap)
