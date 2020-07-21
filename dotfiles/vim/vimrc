@@ -181,6 +181,10 @@ endif
 
 " ale
 "始终开启标志列
+let g:ale_linters = {
+\   'c': ['gcc', 'cppcheck'],
+\   'cpp': ['gcc', "cppcheck"],
+\}
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
 "自定义error和warning图标
@@ -200,11 +204,6 @@ nmap sn <Plug>(ale_next_wrap)
 nmap <Leader>s :ALEToggle<CR>
 "<Leader>d查看错误或警告的详细信息
 nmap <Leader>d :ALEDetail<CR>
-
-let g:ale_linters = {
-\   'c++': ['clang'],
-\   'c': ['clang'],
-\}
 
 call plug#begin('~/.vim/plugged')
 
@@ -233,6 +232,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'townk/vim-autoclose'
 Plug 'dense-analysis/ale'
+Plug 'thinca/vim-localrc'
 "Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-python --enable-go --enable-bash'}
 
 call plug#end()
