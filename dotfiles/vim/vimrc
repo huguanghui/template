@@ -188,8 +188,8 @@ endif
 " ale
 "始终开启标志列
 let g:ale_linters = {
-\   'c': ['gcc', 'cppcheck'],
-\   'cpp': ['gcc', "cppcheck"],
+\   'c': ['gcc'],
+\   'cpp': ['gcc'],
 \}
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
@@ -244,6 +244,7 @@ Plug 'tpope/vim-surround'
 Plug 'townk/vim-autoclose'
 Plug 'dense-analysis/ale'
 Plug 'thinca/vim-localrc'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 "Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-python --enable-go --enable-bash'}
 
 call plug#end()
@@ -282,6 +283,7 @@ imap <F6> <C-x><C-o>
 
 nnoremap <silent> <Leader>ag :Ack! <C-R><C-W><CR>
 nnoremap <silent> <c-p> :Files <CR>
+nnoremap <silent> <Leader>f :LeaderfFunction!<CR>
 nnoremap <silent> <c-e> :Buffers <CR>
 
 " ===
