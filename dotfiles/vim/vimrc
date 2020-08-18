@@ -188,8 +188,8 @@ endif
 " ale
 "始终开启标志列
 let g:ale_linters = {
-\   'c': ['gcc'],
-\   'cpp': ['gcc'],
+\   'c': ['clangcheck'],
+\   'cpp': ['clangcheck'],
 \}
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
