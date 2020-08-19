@@ -40,7 +40,7 @@ set langmenu=zh_CN.UTF-8
 let &termencoding=&encoding
 set fileencodings=utf-8,gbk,ucs-bom,cp936
 set helplang=cn
-let g:python_host_prog='/usr/bin/python2'
+let g:python_host_prog='/usr/bin/python'
 let g:python3_host_prog='/usr/bin/python3'
 " 总是显示状态行
 set cmdheight=2
@@ -90,7 +90,7 @@ let g:ycm_enable_diagnostic_highlighting = 0
 "ycmd setting
 let g:ycm_error_symbol = 'K'
 let g:ycm_warning_symbol = 'O'
-let g:ycm_server_python_interpreter='/usr/bin/python'
+let g:ycm_server_python_interpreter='/usr/bin/python3'
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 "停止提示是否载入本地 ycm_extra_conf 文件
 let g:ycm_confirm_extra_conf = 0
@@ -188,8 +188,8 @@ endif
 " ale
 "始终开启标志列
 let g:ale_linters = {
-\   'c': ['gcc'],
-\   'cpp': ['gcc'],
+\   'c': ['clangcheck'],
+\   'cpp': ['clangcheck'],
 \}
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
