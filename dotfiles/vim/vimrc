@@ -73,7 +73,7 @@ nmap <leader>w :w!<CR>
 nmap <leader>f :find<CR>
 vmap <leader>c "+y
 nmap <leader>v "+gp
-imap <leader>v <esc>"+gp
+nmap <leader>v <esc>"+gp
 
 " 映射按键
 map S :w<CR>
@@ -231,7 +231,7 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'sirver/ultisnips' 
-Plug 'honza/vim-snippets' 
+Plug 'huguanghui/vim-snippets' 
 Plug 'fatih/vim-go', {'do': 'GoUpdateBinaries'}
 Plug 'scrooloose/nerdtree' 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -262,6 +262,7 @@ let Tlist_Exit_OnlyWindow = 1
 map <silent> <F2> :TlistToggle<CR>
 
 "vim-markdown 配置项
+let vim_markdwon_folding_disabled=1
 let vim_markdown_toc_autofit = 1
 let vim_markdown_follow_anchor = 1
 
@@ -280,6 +281,7 @@ map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 imap <F6> <C-x><C-o>
+nmap <F5> :!go run main.go<CR>
 
 nnoremap <silent> <Leader>ag :Ack! <C-R><C-W><CR>
 nnoremap <silent> <c-p> :Files <CR>
