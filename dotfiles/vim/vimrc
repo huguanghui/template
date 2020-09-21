@@ -245,6 +245,9 @@ Plug 'townk/vim-autoclose'
 Plug 'dense-analysis/ale'
 Plug 'thinca/vim-localrc'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'mhinz/vim-signify'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'Shougo/echodoc.vim'
 "Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-python --enable-go --enable-bash'}
 
 call plug#end()
@@ -287,6 +290,9 @@ nnoremap <silent> <Leader>ag :Ack! <C-R><C-W><CR>
 nnoremap <silent> <c-p> :Files <CR>
 nnoremap <silent> <Leader>f :LeaderfFunction!<CR>
 nnoremap <silent> <c-e> :Buffers <CR>
+
+set noshowmode
+let g:echodoc_enable_at_startup = 1
 
 " ===
 " === vimspector
