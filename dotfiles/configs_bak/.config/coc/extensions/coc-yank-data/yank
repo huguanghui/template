@@ -1,0 +1,95 @@
+43c84876f55be8bcae6827e304df3f48|file:///home/hugh/.zshrc|5|1|V|zsh
+	export ZSH=$HOME/.oh-my-zsh
+2ccea8988a8de002d543c8d013c231b1|file:///home/hugh/.config/zsh/aliases.zsh|19|20|v|zsh
+	https://corona-stats.online/states/us
+15639bf2832defcba6bf1560f813bfe3|file:///home/hugh/.config/zsh/aliases.zsh|19|1|V|zsh
+	alias plague='curl https://corona-stats.online/states/us'
+4bf7fead68af558e1da537b9e28b0d42|file:///home/hugh/.zshrc|78|1|V|zsh
+	# Set personal aliases, overriding those provided by oh-my-zsh libs,
+	# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+	# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+	# For a full list of active aliases, run `alias`.
+	#
+	# Example aliases
+	# alias zshconfig="mate ~/.zshrc"
+	# alias ohmyzsh="mate ~/.oh-my-zsh"
+12ee3f3eb37c8c00aa1fc5d9cf64a407|file:///home/hugh/.zshrc|68|1|V|zsh
+	# Preferred editor for local and remote sessions
+	# if [[ -n $SSH_CONNECTION ]]; then
+	#   export EDITOR='vim'
+	# else
+	#   export EDITOR='mvim'
+	# fi
+75214addcc054b8c1fcce240743a7cee|file:///home/hugh/.zshrc|65|1|V|zsh
+	# You may need to manually set your language environment
+	# export LANG=en_US.UTF-8
+67549231496b97ba4786bf28ff10c9d7|file:///home/hugh/.zshrc|63|1|V|zsh
+	# export MANPATH="/usr/local/man:$MANPATH"
+0c8f7c5e54b05fbc345babd1094357d1|file:///home/hugh/.zshrc|61|1|V|zsh
+	# User configuration
+eec4140dc4fd8633e44462d8f45ff270|file:///home/hugh/.zshrc|14|1|V|zsh
+	# Uncomment the following line to use case-sensitive completion.
+	# CASE_SENSITIVE="true"
+b0419790bf7909ab2abc7281b03c253f|file:///home/hugh/.xprofile|3|1|^v|
+	$ 
+	$ 
+	$ 
+	$ 
+48ef6d86b9541e3eed7ab3524042d927|file:///home/hugh/.zshrc|1|1|V|zsh
+	# If you come from bash you might have to change your $PATH.
+	# export PATH=$HOME/bin:/usr/local/bin:$PATH
+e454a17541c9418e9c95fa8cbdb5f978|file:///home/hugh/.zshrc|1|1|V|zsh
+	# Path to your oh-my-zsh installation.
+c0c907080adb9561c689836b43d8675d|file:///home/hugh/.zshrc|4|1|V|zsh
+	[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+5bfc897d17a3b6c9efc35f3f85c8342d|file:///home/hugh/.zshrc|5|21|v|zsh
+	completion
+a3c249e65a882d2e239af8c51b92065f|file:///home/hugh/.zshrc|57|19|V|zsh
+	# Compilation flags
+	# export ARCHFLAGS="-arch x86_64"
+86239457b4d85733d369bc4a36d47b36|file:///home/hugh/.zshrc|58|1|V|zsh
+	[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+3d770661d45a73600ad2b8bcd170d6a4|file:///home/hugh/.config/zsh/prompt.zsh|1|1|V|zsh
+	https://www.chrisatmachine.com/blog
+ffbaf8229b637062223a39602d28f009|file:///home/hugh/.zshrc|1|1|V|zsh
+	[ -f $HOME/.config/zsh/exports.zsh ] && source $HOME/.config/zsh/exports.zsh
+2be756560ea379b223d8515924d4ffad|file:///home/hugh/.zshrc|2|24|v|zsh
+	exports
+fdb9cee7373e0a7b8766659dd1f3a9e6|file:///home/hugh/.config/alacritty/alacritty.yml|243|3|^v|yaml
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+f379eaf3c831b04de153469d1bec345e|file:///home/hugh/.config/alacritty/alacritty.yml|243|16|v|yaml
+	666666
+b326b5062b2f0e69046810717534cb09|file:///home/hugh/.config/picom.conf|125|19|v|conf
+	true
+68934a3e9455fa72420237eb05902327|file:///home/hugh/.config/picom.conf|218|14|v|conf
+	false
+7d5ea8552f26224b3a04b3c674d46e53|file:///home/hugh/.config/picom.conf|244|1|V|conf
+	#"99:name *?= 'Conky'", 
+a893550595f77ef6249360a5e924513f|file:///home/hugh/.config/picom.conf|245|1|V|conf
+	  "99:name *?= 'nvim'", 
+b96d3a790cfe56278d70db1891f979a9|file:///home/hugh/.config/picom.conf|246|1|V|conf
+	  "100:name *?= 'vim'", 
+f363ea0afe800d6623e43872b0a34cec|file:///home/hugh/.config/picom.conf|247|1|V|conf
+	  "100:name *?= 'vi'", 
+b928821a4e460d8122158c9e14ea3fcc|file:///home/hugh/.config/picom.conf|250|1|V|conf
+	  "50:class_g = 'Dmenu'", 
+522e40113649e97fb12b8be972cbdc37|file:///home/hugh/.config/picom.conf|251|18|v|conf
+	Dmenu
+9d40d5a2a0203f01a567a0907f1b69a7|file:///home/hugh/.config/zsh/aliases.zsh|6|1|V|zsh
+	alias v="nvim ."
+2231aadb1caaff7cdf3a24e8244e7aef|file:///home/hugh/.config/zsh/aliases.zsh|7|1|V|zsh
+	alias vi="nvim"
+f26114ffaadb0fea8be51a5ba9590b8d|file:///home/hugh/.i3/config|61|22|v|conf
+	palemoon
+	
+89b14a65ea036b23c87bb57027423399|file:///home/hugh/.config/nvim/__coc_refactor__0|2|1|V|
+	ave current buffer to make changes
+c444858e0aaeb727da73d2eae62321ad|file:///home/hugh/.config/nvim/__coc_refactor__0|1|1|V|
+	leader
