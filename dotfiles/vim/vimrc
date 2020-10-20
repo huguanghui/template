@@ -84,6 +84,8 @@ nnoremap <leader>g :grep <c-r><c-w> */**<cr>
 
 filetype plugin on
 
+set updatetime=100
+
 "disable ycm 语法检测
 let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 0
@@ -188,8 +190,8 @@ endif
 " ale
 "始终开启标志列
 let g:ale_linters = {
-\   'c': ['clangcheck'],
-\   'cpp': ['clangcheck'],
+\   'c': ['cppcheck'],
+\   'cpp': ['cppcheck'],
 \}
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
@@ -249,6 +251,7 @@ Plug 'mhinz/vim-signify'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'Shougo/echodoc.vim'
 Plug 'justinmk/vim-dirvish'
+Plug 'vimwiki/vimwiki'
 "Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-c --enable-python --enable-go --enable-bash'}
 
 call plug#end()
