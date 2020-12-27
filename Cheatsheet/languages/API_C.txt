@@ -1,0 +1,14 @@
+# 时间
+
+## 时间调试
+
+#define MS(ts) (unsigned int)((ts.tv_sec * 1000) + (ts.tv_nsec / 1000000))
+
+struct timespec tp;
+clock_gettime(CLOCK_MONOTONIC, &tp);
+cur_tm = MS(tp);
+
+# 文件处理
+
+
+# 网络
