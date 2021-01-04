@@ -12,3 +12,25 @@ cur_tm = MS(tp);
 
 
 # 网络
+
+DEV_GAT1400
+
+184839120000018#5a589a6975a9#3KSCA44385ELXJM
+184839120000018#5A589A6975A9#3KSCA44385ELXJM
+
+192.168.2.40 - 192.168.2.49
+
+https://github.com/satanson/cpp_etudes/blob/master/cpptree.pl
+https://github.com/satanson/cpp_etudes/blob/master/calltree.pl
+
+    char *m_BkgImgBuf;
+    unsigned int m_nBkgImgBufLen;
+    char *m_FaceImgBuf;
+    unsigned int m_nFaceImgBufLen;
+	
+	CChannelContext *pChContext = NULL;
+	HY_Enc_GetEncChInfo(&pChContext);
+	
+	    SystemInfo_t		*pSysInfo;
+
+    HY_Res_GetSystemInfo(&pSysInfo);
