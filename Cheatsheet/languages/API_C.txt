@@ -20,9 +20,6 @@ DEV_GAT1400
 
 192.168.2.40 - 192.168.2.49
 
-https://github.com/satanson/cpp_etudes/blob/master/cpptree.pl
-https://github.com/satanson/cpp_etudes/blob/master/calltree.pl
-
     char *m_BkgImgBuf;
     unsigned int m_nBkgImgBufLen;
     char *m_FaceImgBuf;
