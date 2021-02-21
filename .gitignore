@@ -2,3 +2,5 @@
 shell/gdb-9.1/
 
 shell/gdb-9.1.tar.gz
+.xmake/
+build/
