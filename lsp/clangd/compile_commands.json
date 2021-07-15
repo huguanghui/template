@@ -1,0 +1,871 @@
+[
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtcp-interval.c.o", "fw/librtp/src/rtcp-interval.c"],
+  "file": "fw/librtp/src/rtcp-interval.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtp-profile.c.o", "fw/librtp/src/rtp-profile.c"],
+  "file": "fw/librtp/src/rtp-profile.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtp-queue.c.o", "fw/librtp/src/rtp-queue.c"],
+  "file": "fw/librtp/src/rtp-queue.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtp-time.c.o", "fw/librtp/src/rtp-time.c"],
+  "file": "fw/librtp/src/rtp-time.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtp-member.c.o", "fw/librtp/src/rtp-member.c"],
+  "file": "fw/librtp/src/rtp-member.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtcp-sr.c.o", "fw/librtp/src/rtcp-sr.c"],
+  "file": "fw/librtp/src/rtcp-sr.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtcp-sdec.c.o", "fw/librtp/src/rtcp-sdec.c"],
+  "file": "fw/librtp/src/rtcp-sdec.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtcp.c.o", "fw/librtp/src/rtcp.c"],
+  "file": "fw/librtp/src/rtcp.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtp-demuxer.c.o", "fw/librtp/src/rtp-demuxer.c"],
+  "file": "fw/librtp/src/rtp-demuxer.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtp-packet.c.o", "fw/librtp/src/rtp-packet.c"],
+  "file": "fw/librtp/src/rtp-packet.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtcp-rr.c.o", "fw/librtp/src/rtcp-rr.c"],
+  "file": "fw/librtp/src/rtcp-rr.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtcp-bye.c.o", "fw/librtp/src/rtcp-bye.c"],
+  "file": "fw/librtp/src/rtcp-bye.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtp-member-list.c.o", "fw/librtp/src/rtp-member-list.c"],
+  "file": "fw/librtp/src/rtp-member-list.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtp-ssrc.c.o", "fw/librtp/src/rtp-ssrc.c"],
+  "file": "fw/librtp/src/rtp-ssrc.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtp.c.o", "fw/librtp/src/rtp.c"],
+  "file": "fw/librtp/src/rtp.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/rtcp-app.c.o", "fw/librtp/src/rtcp-app.c"],
+  "file": "fw/librtp/src/rtcp-app.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-mpeg4-generic-unpack.c.o", "fw/librtp/src/payload/rtp-mpeg4-generic-unpack.c"],
+  "file": "fw/librtp/src/payload/rtp-mpeg4-generic-unpack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-h264-unpack.c.o", "fw/librtp/src/payload/rtp-h264-unpack.c"],
+  "file": "fw/librtp/src/payload/rtp-h264-unpack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-mpeg1or2es-unpack.c.o", "fw/librtp/src/payload/rtp-mpeg1or2es-unpack.c"],
+  "file": "fw/librtp/src/payload/rtp-mpeg1or2es-unpack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-vp9-pack.c.o", "fw/librtp/src/payload/rtp-vp9-pack.c"],
+  "file": "fw/librtp/src/payload/rtp-vp9-pack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-h264-pack.c.o", "fw/librtp/src/payload/rtp-h264-pack.c"],
+  "file": "fw/librtp/src/payload/rtp-h264-pack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-ts-pack.c.o", "fw/librtp/src/payload/rtp-ts-pack.c"],
+  "file": "fw/librtp/src/payload/rtp-ts-pack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-vp8-unpack.c.o", "fw/librtp/src/payload/rtp-vp8-unpack.c"],
+  "file": "fw/librtp/src/payload/rtp-vp8-unpack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-h265-pack.c.o", "fw/librtp/src/payload/rtp-h265-pack.c"],
+  "file": "fw/librtp/src/payload/rtp-h265-pack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-mp4v-es-unpack.c.o", "fw/librtp/src/payload/rtp-mp4v-es-unpack.c"],
+  "file": "fw/librtp/src/payload/rtp-mp4v-es-unpack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-payload.c.o", "fw/librtp/src/payload/rtp-payload.c"],
+  "file": "fw/librtp/src/payload/rtp-payload.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-mp4a-latm-pack.c.o", "fw/librtp/src/payload/rtp-mp4a-latm-pack.c"],
+  "file": "fw/librtp/src/payload/rtp-mp4a-latm-pack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-pack.c.o", "fw/librtp/src/payload/rtp-pack.c"],
+  "file": "fw/librtp/src/payload/rtp-pack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-mpeg1or2es-pack.c.o", "fw/librtp/src/payload/rtp-mpeg1or2es-pack.c"],
+  "file": "fw/librtp/src/payload/rtp-mpeg1or2es-pack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-av1-unpack.c.o", "fw/librtp/src/payload/rtp-av1-unpack.c"],
+  "file": "fw/librtp/src/payload/rtp-av1-unpack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-mp4a-latm-unpack.c.o", "fw/librtp/src/payload/rtp-mp4a-latm-unpack.c"],
+  "file": "fw/librtp/src/payload/rtp-mp4a-latm-unpack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-unpack.c.o", "fw/librtp/src/payload/rtp-unpack.c"],
+  "file": "fw/librtp/src/payload/rtp-unpack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-h265-unpack.c.o", "fw/librtp/src/payload/rtp-h265-unpack.c"],
+  "file": "fw/librtp/src/payload/rtp-h265-unpack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-vp8-pack.c.o", "fw/librtp/src/payload/rtp-vp8-pack.c"],
+  "file": "fw/librtp/src/payload/rtp-vp8-pack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-ts-unpack.c.o", "fw/librtp/src/payload/rtp-ts-unpack.c"],
+  "file": "fw/librtp/src/payload/rtp-ts-unpack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-av1-pack.c.o", "fw/librtp/src/payload/rtp-av1-pack.c"],
+  "file": "fw/librtp/src/payload/rtp-av1-pack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-ps-unpack.c.o", "fw/librtp/src/payload/rtp-ps-unpack.c"],
+  "file": "fw/librtp/src/payload/rtp-ps-unpack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-vp9-unpack.c.o", "fw/librtp/src/payload/rtp-vp9-unpack.c"],
+  "file": "fw/librtp/src/payload/rtp-vp9-unpack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-mp4v-es-pack.c.o", "fw/librtp/src/payload/rtp-mp4v-es-pack.c"],
+  "file": "fw/librtp/src/payload/rtp-mp4v-es-pack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-payload-helper.c.o", "fw/librtp/src/payload/rtp-payload-helper.c"],
+  "file": "fw/librtp/src/payload/rtp-payload-helper.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtp/linux/arm/release/fw/librtp/src/payload/rtp-mpeg4-generic-pack.c.o", "fw/librtp/src/payload/rtp-mpeg4-generic-pack.c"],
+  "file": "fw/librtp/src/payload/rtp-mpeg4-generic-pack.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/live_stream/inc", "-DNDEBUG", "-o", "build/.objs/livestream/linux/arm/release/mod/live_stream/src/live.c.o", "mod/live_stream/src/live.c"],
+  "file": "mod/live_stream/src/live.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/nm/inc", "-DNDEBUG", "-o", "build/.objs/nm_rep/linux/arm/release/fw/nm/nm_rep/main.c.o", "fw/nm/nm_rep/main.c"],
+  "file": "fw/nm/nm_rep/main.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fPIC", "-O3", "-Iinclude", "-I.", "-Ifw/cjson/inc", "-DNDEBUG", "-o", "build/.objs/cjson/linux/arm/release/fw/cjson/src/cJSON.c.o", "fw/cjson/src/cJSON.c"],
+  "file": "fw/cjson/src/cJSON.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fPIC", "-O3", "-Iinclude", "-I.", "-Ifw/nm/inc", "-DNDEBUG", "-o", "build/.objs/nm/linux/arm/release/fw/nm/src/nm.c.o", "fw/nm/src/nm.c"],
+  "file": "fw/nm/src/nm.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fPIC", "-O3", "-Iinclude", "-I.", "-Ifw/cfifo/inc", "-DNDEBUG", "-o", "build/.objs/cfifo/linux/arm/release/fw/cfifo/src/fdlock.c.o", "fw/cfifo/src/fdlock.c"],
+  "file": "fw/cfifo/src/fdlock.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fPIC", "-O3", "-Iinclude", "-I.", "-Ifw/cfifo/inc", "-DNDEBUG", "-o", "build/.objs/cfifo/linux/arm/release/fw/cfifo/src/aolock.c.o", "fw/cfifo/src/aolock.c"],
+  "file": "fw/cfifo/src/aolock.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fPIC", "-O3", "-Iinclude", "-I.", "-Ifw/cfifo/inc", "-DNDEBUG", "-o", "build/.objs/cfifo/linux/arm/release/fw/cfifo/src/cfifo.c.o", "fw/cfifo/src/cfifo.c"],
+  "file": "fw/cfifo/src/cfifo.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fPIC", "-O3", "-Iinclude", "-I.", "-Ifw/cfifo/inc", "-DNDEBUG", "-o", "build/.objs/cfifo/linux/arm/release/fw/cfifo/src/spin.c.o", "fw/cfifo/src/spin.c"],
+  "file": "fw/cfifo/src/spin.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fPIC", "-O3", "-Iinclude", "-I.", "-Ifw/cfifo/inc", "-DNDEBUG", "-o", "build/.objs/cfifo/linux/arm/release/fw/cfifo/src/shm.c.o", "fw/cfifo/src/shm.c"],
+  "file": "fw/cfifo/src/shm.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fPIC", "-O3", "-Iinclude", "-I.", "-Ifw/cfifo/inc", "-DNDEBUG", "-o", "build/.objs/cfifo/linux/arm/release/fw/cfifo/src/mutex.c.o", "fw/cfifo/src/mutex.c"],
+  "file": "fw/cfifo/src/mutex.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fPIC", "-O3", "-Iinclude", "-I.", "-Ifw/cfifo/inc", "-DNDEBUG", "-o", "build/.objs/cfifo/linux/arm/release/fw/cfifo/src/timer.c.o", "fw/cfifo/src/timer.c"],
+  "file": "fw/cfifo/src/timer.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DNDEBUG", "-o", "build/.objs/test_log/linux/arm/release/test/test_log/test_log.c.o", "test/test_log/test_log.c"],
+  "file": "test/test_log/test_log.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DNDEBUG", "-o", "build/.objs/test_cjson/linux/arm/release/test/test_cjson/test_cjson.c.o", "test/test_cjson/test_cjson.c"],
+  "file": "test/test_cjson/test_cjson.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/rtsp-header-session.c.o", "fw/librtsp/src/rtsp-header-session.c"],
+  "file": "fw/librtsp/src/rtsp-header-session.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/rtsp-header-transport.c.o", "fw/librtsp/src/rtsp-header-transport.c"],
+  "file": "fw/librtsp/src/rtsp-header-transport.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/sdp-a-fmtp.c.o", "fw/librtsp/src/sdp-a-fmtp.c"],
+  "file": "fw/librtsp/src/sdp-a-fmtp.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/sdp.c.o", "fw/librtsp/src/sdp.c"],
+  "file": "fw/librtsp/src/sdp.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/rtsp-media.c.o", "fw/librtsp/src/rtsp-media.c"],
+  "file": "fw/librtsp/src/rtsp-media.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/sdp-a-rtpmap.c.o", "fw/librtsp/src/sdp-a-rtpmap.c"],
+  "file": "fw/librtsp/src/sdp-a-rtpmap.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/rtsp-header-range.c.o", "fw/librtsp/src/rtsp-header-range.c"],
+  "file": "fw/librtsp/src/rtsp-header-range.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/rtsp-header-rtp-info.c.o", "fw/librtsp/src/rtsp-header-rtp-info.c"],
+  "file": "fw/librtsp/src/rtsp-header-rtp-info.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/rtsp-reason.c.o", "fw/librtsp/src/rtsp-reason.c"],
+  "file": "fw/librtsp/src/rtsp-reason.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/rtsp-multicast.c.o", "fw/librtsp/src/rtsp-multicast.c"],
+  "file": "fw/librtsp/src/rtsp-multicast.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/client/rtp-over-rtsp.c.o", "fw/librtsp/src/client/rtp-over-rtsp.c"],
+  "file": "fw/librtsp/src/client/rtp-over-rtsp.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/client/rtsp-client-announce.c.o", "fw/librtsp/src/client/rtsp-client-announce.c"],
+  "file": "fw/librtsp/src/client/rtsp-client-announce.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/client/rtsp-client-record.c.o", "fw/librtsp/src/client/rtsp-client-record.c"],
+  "file": "fw/librtsp/src/client/rtsp-client-record.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/client/rtsp-client-describe.c.o", "fw/librtsp/src/client/rtsp-client-describe.c"],
+  "file": "fw/librtsp/src/client/rtsp-client-describe.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/client/rtsp-client-set-parameter.c.o", "fw/librtsp/src/client/rtsp-client-set-parameter.c"],
+  "file": "fw/librtsp/src/client/rtsp-client-set-parameter.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/client/rtsp-client-auth.c.o", "fw/librtsp/src/client/rtsp-client-auth.c"],
+  "file": "fw/librtsp/src/client/rtsp-client-auth.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/client/rtsp-client-teardown.c.o", "fw/librtsp/src/client/rtsp-client-teardown.c"],
+  "file": "fw/librtsp/src/client/rtsp-client-teardown.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/client/rtsp-client-pause.c.o", "fw/librtsp/src/client/rtsp-client-pause.c"],
+  "file": "fw/librtsp/src/client/rtsp-client-pause.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/client/rtsp-client-options.c.o", "fw/librtsp/src/client/rtsp-client-options.c"],
+  "file": "fw/librtsp/src/client/rtsp-client-options.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/client/rtsp-client-setup.c.o", "fw/librtsp/src/client/rtsp-client-setup.c"],
+  "file": "fw/librtsp/src/client/rtsp-client-setup.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/client/rtsp-client-play.c.o", "fw/librtsp/src/client/rtsp-client-play.c"],
+  "file": "fw/librtsp/src/client/rtsp-client-play.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/client/rtsp-client-get-parameter.c.o", "fw/librtsp/src/client/rtsp-client-get-parameter.c"],
+  "file": "fw/librtsp/src/client/rtsp-client-get-parameter.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/client/rtsp-client.c.o", "fw/librtsp/src/client/rtsp-client.c"],
+  "file": "fw/librtsp/src/client/rtsp-client.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/server/rtsp-server-setup.c.o", "fw/librtsp/src/server/rtsp-server-setup.c"],
+  "file": "fw/librtsp/src/server/rtsp-server-setup.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/server/rtsp-server-record.c.o", "fw/librtsp/src/server/rtsp-server-record.c"],
+  "file": "fw/librtsp/src/server/rtsp-server-record.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/server/rtsp-server-play.c.o", "fw/librtsp/src/server/rtsp-server-play.c"],
+  "file": "fw/librtsp/src/server/rtsp-server-play.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/server/rtsp-server-teardown.c.o", "fw/librtsp/src/server/rtsp-server-teardown.c"],
+  "file": "fw/librtsp/src/server/rtsp-server-teardown.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/server/rtsp-server-parameter.c.o", "fw/librtsp/src/server/rtsp-server-parameter.c"],
+  "file": "fw/librtsp/src/server/rtsp-server-parameter.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/server/rtsp-server-options.c.o", "fw/librtsp/src/server/rtsp-server-options.c"],
+  "file": "fw/librtsp/src/server/rtsp-server-options.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/server/rtsp-server-handler.c.o", "fw/librtsp/src/server/rtsp-server-handler.c"],
+  "file": "fw/librtsp/src/server/rtsp-server-handler.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/server/rtsp-server-pause.c.o", "fw/librtsp/src/server/rtsp-server-pause.c"],
+  "file": "fw/librtsp/src/server/rtsp-server-pause.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/server/rtsp-server-announce.c.o", "fw/librtsp/src/server/rtsp-server-announce.c"],
+  "file": "fw/librtsp/src/server/rtsp-server-announce.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/server/rtsp-server.c.o", "fw/librtsp/src/server/rtsp-server.c"],
+  "file": "fw/librtsp/src/server/rtsp-server.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/librtsp/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/rtsp/linux/arm/release/fw/librtsp/src/server/rtsp-server-describe.c.o", "fw/librtsp/src/server/rtsp-server-describe.c"],
+  "file": "fw/librtsp/src/server/rtsp-server-describe.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DNDEBUG", "-o", "build/.objs/demo_pthread/linux/arm/release/nanomsg/src/pthread_demo.c.o", "nanomsg/src/pthread_demo.c"],
+  "file": "nanomsg/src/pthread_demo.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/h26xbits/inc", "-fstack-protector", "-fPIC", "-DNDEBUG", "-o", "build/.objs/h26xbits/linux/arm/release/fw/h26xbits/src/h26xbits.c.o", "fw/h26xbits/src/h26xbits.c"],
+  "file": "fw/h26xbits/src/h26xbits.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/h26xbits/inc", "-fstack-protector", "-fPIC", "-DNDEBUG", "-o", "build/.objs/h26xbits/linux/arm/release/fw/h26xbits/src/hevc_nal.c.o", "fw/h26xbits/src/hevc_nal.c"],
+  "file": "fw/h26xbits/src/hevc_nal.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/h26xbits/inc", "-fstack-protector", "-fPIC", "-DNDEBUG", "-o", "build/.objs/h26xbits/linux/arm/release/fw/h26xbits/src/h264_sei.c.o", "fw/h26xbits/src/h264_sei.c"],
+  "file": "fw/h26xbits/src/h264_sei.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/h26xbits/inc", "-fstack-protector", "-fPIC", "-DNDEBUG", "-o", "build/.objs/h26xbits/linux/arm/release/fw/h26xbits/src/h264_stream.c.o", "fw/h26xbits/src/h264_stream.c"],
+  "file": "fw/h26xbits/src/h264_stream.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DNDEBUG", "-o", "build/.objs/demo_pubsub/linux/arm/release/nanomsg/src/pubsub_demo.c.o", "nanomsg/src/pubsub_demo.c"],
+  "file": "nanomsg/src/pubsub_demo.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/test_st_tcp_s/linux/arm/release/test/test_st_tcp/main.c.o", "test/test_st_tcp/main.c"],
+  "file": "test/test_st_tcp/main.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/audio", "-Imod/mpp/3516dv300/audio/adp", "-Imod/mpp/3516dv300/scene_auto/include", "-Imod/mpp/3516dv300/scene_auto/src/core", "-DNDEBUG", "-o", "build/.objs/mpp/linux/arm/release/mod/mpp/3516dv300/src/mpp.c.o", "mod/mpp/3516dv300/src/mpp.c"],
+  "file": "mod/mpp/3516dv300/src/mpp.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/audio", "-Imod/mpp/3516dv300/audio/adp", "-Imod/mpp/3516dv300/scene_auto/include", "-Imod/mpp/3516dv300/scene_auto/src/core", "-DNDEBUG", "-o", "build/.objs/mpp/linux/arm/release/mod/mpp/3516dv300/src/sample_venc.c.o", "mod/mpp/3516dv300/src/sample_venc.c"],
+  "file": "mod/mpp/3516dv300/src/sample_venc.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/audio", "-Imod/mpp/3516dv300/audio/adp", "-Imod/mpp/3516dv300/scene_auto/include", "-Imod/mpp/3516dv300/scene_auto/src/core", "-DNDEBUG", "-o", "build/.objs/mpp/linux/arm/release/mod/mpp/3516dv300/common/sample_comm_vpss.c.o", "mod/mpp/3516dv300/common/sample_comm_vpss.c"],
+  "file": "mod/mpp/3516dv300/common/sample_comm_vpss.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/audio", "-Imod/mpp/3516dv300/audio/adp", "-Imod/mpp/3516dv300/scene_auto/include", "-Imod/mpp/3516dv300/scene_auto/src/core", "-DNDEBUG", "-o", "build/.objs/mpp/linux/arm/release/mod/mpp/3516dv300/common/sample_comm_sys.c.o", "mod/mpp/3516dv300/common/sample_comm_sys.c"],
+  "file": "mod/mpp/3516dv300/common/sample_comm_sys.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/audio", "-Imod/mpp/3516dv300/audio/adp", "-Imod/mpp/3516dv300/scene_auto/include", "-Imod/mpp/3516dv300/scene_auto/src/core", "-DNDEBUG", "-o", "build/.objs/mpp/linux/arm/release/mod/mpp/3516dv300/common/sample_comm_vo.c.o", "mod/mpp/3516dv300/common/sample_comm_vo.c"],
+  "file": "mod/mpp/3516dv300/common/sample_comm_vo.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/audio", "-Imod/mpp/3516dv300/audio/adp", "-Imod/mpp/3516dv300/scene_auto/include", "-Imod/mpp/3516dv300/scene_auto/src/core", "-DNDEBUG", "-o", "build/.objs/mpp/linux/arm/release/mod/mpp/3516dv300/common/sample_comm_audio.c.o", "mod/mpp/3516dv300/common/sample_comm_audio.c"],
+  "file": "mod/mpp/3516dv300/common/sample_comm_audio.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/audio", "-Imod/mpp/3516dv300/audio/adp", "-Imod/mpp/3516dv300/scene_auto/include", "-Imod/mpp/3516dv300/scene_auto/src/core", "-DNDEBUG", "-o", "build/.objs/mpp/linux/arm/release/mod/mpp/3516dv300/common/sample_comm_vdec.c.o", "mod/mpp/3516dv300/common/sample_comm_vdec.c"],
+  "file": "mod/mpp/3516dv300/common/sample_comm_vdec.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/audio", "-Imod/mpp/3516dv300/audio/adp", "-Imod/mpp/3516dv300/scene_auto/include", "-Imod/mpp/3516dv300/scene_auto/src/core", "-DNDEBUG", "-o", "build/.objs/mpp/linux/arm/release/mod/mpp/3516dv300/common/sample_comm_venc.c.o", "mod/mpp/3516dv300/common/sample_comm_venc.c"],
+  "file": "mod/mpp/3516dv300/common/sample_comm_venc.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/audio", "-Imod/mpp/3516dv300/audio/adp", "-Imod/mpp/3516dv300/scene_auto/include", "-Imod/mpp/3516dv300/scene_auto/src/core", "-DNDEBUG", "-o", "build/.objs/mpp/linux/arm/release/mod/mpp/3516dv300/common/loadbmp.c.o", "mod/mpp/3516dv300/common/loadbmp.c"],
+  "file": "mod/mpp/3516dv300/common/loadbmp.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/audio", "-Imod/mpp/3516dv300/audio/adp", "-Imod/mpp/3516dv300/scene_auto/include", "-Imod/mpp/3516dv300/scene_auto/src/core", "-DNDEBUG", "-o", "build/.objs/mpp/linux/arm/release/mod/mpp/3516dv300/common/sample_comm_vi.c.o", "mod/mpp/3516dv300/common/sample_comm_vi.c"],
+  "file": "mod/mpp/3516dv300/common/sample_comm_vi.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/audio", "-Imod/mpp/3516dv300/audio/adp", "-Imod/mpp/3516dv300/scene_auto/include", "-Imod/mpp/3516dv300/scene_auto/src/core", "-DNDEBUG", "-o", "build/.objs/mpp/linux/arm/release/mod/mpp/3516dv300/common/sample_comm_region.c.o", "mod/mpp/3516dv300/common/sample_comm_region.c"],
+  "file": "mod/mpp/3516dv300/common/sample_comm_region.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/audio", "-Imod/mpp/3516dv300/audio/adp", "-Imod/mpp/3516dv300/scene_auto/include", "-Imod/mpp/3516dv300/scene_auto/src/core", "-DNDEBUG", "-o", "build/.objs/mpp/linux/arm/release/mod/mpp/3516dv300/common/sample_comm_isp.c.o", "mod/mpp/3516dv300/common/sample_comm_isp.c"],
+  "file": "mod/mpp/3516dv300/common/sample_comm_isp.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/rtsps.c.o", "mod/rtsps/src/rtsps.c"],
+  "file": "mod/rtsps/src/rtsps.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/sjb_rtsps.c.o", "mod/rtsps/src/sjb_rtsps.c"],
+  "file": "mod/rtsps/src/sjb_rtsps.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/msg_func.c.o", "mod/rtsps/src/msg_func.c"],
+  "file": "mod/rtsps/src/msg_func.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/cfg.c.o", "mod/rtsps/src/cfg.c"],
+  "file": "mod/rtsps/src/cfg.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/st-rtsp/rtsp-st.c.o", "mod/rtsps/src/st-rtsp/rtsp-st.c"],
+  "file": "mod/rtsps/src/st-rtsp/rtsp-st.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/st-rtsp/rtsp-server-session.c.o", "mod/rtsps/src/st-rtsp/rtsp-server-session.c"],
+  "file": "mod/rtsps/src/st-rtsp/rtsp-server-session.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/st-rtsp/rtp-media-file.c.o", "mod/rtsps/src/st-rtsp/rtp-media-file.c"],
+  "file": "mod/rtsps/src/st-rtsp/rtp-media-file.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/st-rtsp/rtsp-client-st.c.o", "mod/rtsps/src/st-rtsp/rtsp-client-st.c"],
+  "file": "mod/rtsps/src/st-rtsp/rtsp-client-st.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/st-rtsp/rtp-transport.c.o", "mod/rtsps/src/st-rtsp/rtp-transport.c"],
+  "file": "mod/rtsps/src/st-rtsp/rtp-transport.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/st-rtsp/rtsp-server-st.c.o", "mod/rtsps/src/st-rtsp/rtsp-server-st.c"],
+  "file": "mod/rtsps/src/st-rtsp/rtsp-server-st.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/st-rtsp/rtp-socket.c.o", "mod/rtsps/src/st-rtsp/rtp-socket.c"],
+  "file": "mod/rtsps/src/st-rtsp/rtp-socket.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/st-rtsp/rtsp-server-listen.c.o", "mod/rtsps/src/st-rtsp/rtsp-server-listen.c"],
+  "file": "mod/rtsps/src/st-rtsp/rtsp-server-listen.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/st-rtsp/rtp-media-live.c.o", "mod/rtsps/src/st-rtsp/rtp-media-live.c"],
+  "file": "mod/rtsps/src/st-rtsp/rtp-media-live.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/rtsps/inc", "-Imod/rtsps/src", "-Imod/rtsps/src/st-rtsp", "-Ifw/libst/inc", "-Ifw/libhttp/inc", "-Ifw/librtp/inc", "-Ifw/librtsp/inc", "-Ifw/h26xbits/inc", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/rtsps/linux/arm/release/mod/rtsps/src/st-rtsp/rtp-receiver.c.o", "mod/rtsps/src/st-rtsp/rtp-receiver.c"],
+  "file": "mod/rtsps/src/st-rtsp/rtp-receiver.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/nm/inc", "-DNDEBUG", "-o", "build/.objs/nm_pub/linux/arm/release/fw/nm/nm_pub/main.c.o", "fw/nm/nm_pub/main.c"],
+  "file": "fw/nm/nm_pub/main.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/nm/inc", "-DNDEBUG", "-o", "build/.objs/nm_sub/linux/arm/release/fw/nm/nm_sub/main.c.o", "fw/nm/nm_sub/main.c"],
+  "file": "fw/nm/nm_sub/main.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/nm/inc", "-DNDEBUG", "-o", "build/.objs/nm_push/linux/arm/release/fw/nm/nm_push/main.c.o", "fw/nm/nm_push/main.c"],
+  "file": "fw/nm/nm_push/main.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/nm/inc", "-DNDEBUG", "-o", "build/.objs/nm_pull/linux/arm/release/fw/nm/nm_pull/main.c.o", "fw/nm/nm_pull/main.c"],
+  "file": "fw/nm/nm_pull/main.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/nm/inc", "-DNDEBUG", "-o", "build/.objs/nm_req/linux/arm/release/fw/nm/nm_req/main.c.o", "fw/nm/nm_req/main.c"],
+  "file": "fw/nm/nm_req/main.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/cfifo/test", "-DNDEBUG", "-o", "build/.objs/test_shm_read/linux/arm/release/fw/cfifo/test/test_shm_read.c.o", "fw/cfifo/test/test_shm_read.c"],
+  "file": "fw/cfifo/test/test_shm_read.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DNDEBUG", "-o", "build/.objs/nanomsg/linux/arm/release/nanomsg/src/main_bak.c.o", "nanomsg/src/main_bak.c"],
+  "file": "nanomsg/src/main_bak.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/http-header-authorization.c.o", "fw/libhttp/src/http-header-authorization.c"],
+  "file": "fw/libhttp/src/http-header-authorization.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/uri-parse.c.o", "fw/libhttp/src/uri-parse.c"],
+  "file": "fw/libhttp/src/uri-parse.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/http-header-www-authenticate.c.o", "fw/libhttp/src/http-header-www-authenticate.c"],
+  "file": "fw/libhttp/src/http-header-www-authenticate.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/urlcodec.c.o", "fw/libhttp/src/urlcodec.c"],
+  "file": "fw/libhttp/src/urlcodec.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/http-reason.c.o", "fw/libhttp/src/http-reason.c"],
+  "file": "fw/libhttp/src/http-reason.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/base64.c.o", "fw/libhttp/src/base64.c"],
+  "file": "fw/libhttp/src/base64.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/ntp-time.c.o", "fw/libhttp/src/ntp-time.c"],
+  "file": "fw/libhttp/src/ntp-time.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/time64.c.o", "fw/libhttp/src/time64.c"],
+  "file": "fw/libhttp/src/time64.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/http-header-expires.c.o", "fw/libhttp/src/http-header-expires.c"],
+  "file": "fw/libhttp/src/http-header-expires.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/http-header-host.c.o", "fw/libhttp/src/http-header-host.c"],
+  "file": "fw/libhttp/src/http-header-host.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/rfc822-datetime.c.o", "fw/libhttp/src/rfc822-datetime.c"],
+  "file": "fw/libhttp/src/rfc822-datetime.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/http-header-content-type.c.o", "fw/libhttp/src/http-header-content-type.c"],
+  "file": "fw/libhttp/src/http-header-content-type.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/http-parser.c.o", "fw/libhttp/src/http-parser.c"],
+  "file": "fw/libhttp/src/http-parser.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/http-header-auth.c.o", "fw/libhttp/src/http-header-auth.c"],
+  "file": "fw/libhttp/src/http-header-auth.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/md5.c.o", "fw/libhttp/src/md5.c"],
+  "file": "fw/libhttp/src/md5.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/libhttp/inc", "-DOS_LINUX", "-DDEBUG", "-D_DEBUG", "-Wall", "-fPIC", "-MMD", "-DNDEBUG", "-o", "build/.objs/http/linux/arm/release/fw/libhttp/src/http-header-range.c.o", "fw/libhttp/src/http-header-range.c"],
+  "file": "fw/libhttp/src/http-header-range.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-Iinclude", "-I.", "-Igtest/include", "-std=c++11", "-DGTEST_HAS_PTHREAD=1", "-DNDEBUG", "-o", "build/.objs/gtest_cfifo/linux/arm/release/gtest/cfifo/gtest.cpp.o", "gtest/cfifo/gtest.cpp"],
+  "file": "gtest/cfifo/gtest.cpp"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/codec/inc", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/acene_auto", "-Wall", "-Dhi3516cv500", "-DHI_XXXX", "-DISP_V2", "-lstdc++", "-mcpu=cortex-a7", "-mfloat-abi=softfp", "-mfpu=neon-vfpv4", "-fno-aggressive-loop-optimizations", "-ffunction-sections", "-fdata-sections", "-fstack-protector-strong", "-fPIC", "-DHI_RELEASE", "-Wno-error=implicit-function-declaration", "-DVER_X=1", "-DVER_Y=0", "-DVER_Z=0", "-DVER_P=0", "-DVER_B=10", "-DUSER_BIT_32", "-DKERNEL_BIT_32", "-Wno-date-time", "-DHI_ACODEC_TYPE_INNER", "-DHI_ACODEC_TYPE_HDMI", "-DNDEBUG", "-o", "build/.objs/ipc_codec/linux/arm/release/mod/codec/ipc/sjb_codec.c.o", "mod/codec/ipc/sjb_codec.c"],
+  "file": "mod/codec/ipc/sjb_codec.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/codec/inc", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/acene_auto", "-Wall", "-Dhi3516cv500", "-DHI_XXXX", "-DISP_V2", "-lstdc++", "-mcpu=cortex-a7", "-mfloat-abi=softfp", "-mfpu=neon-vfpv4", "-fno-aggressive-loop-optimizations", "-ffunction-sections", "-fdata-sections", "-fstack-protector-strong", "-fPIC", "-DHI_RELEASE", "-Wno-error=implicit-function-declaration", "-DVER_X=1", "-DVER_Y=0", "-DVER_Z=0", "-DVER_P=0", "-DVER_B=10", "-DUSER_BIT_32", "-DKERNEL_BIT_32", "-Wno-date-time", "-DHI_ACODEC_TYPE_INNER", "-DHI_ACODEC_TYPE_HDMI", "-DNDEBUG", "-o", "build/.objs/ipc_codec/linux/arm/release/mod/codec/ipc/venc.c.o", "mod/codec/ipc/venc.c"],
+  "file": "mod/codec/ipc/venc.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/codec/inc", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/acene_auto", "-Wall", "-Dhi3516cv500", "-DHI_XXXX", "-DISP_V2", "-lstdc++", "-mcpu=cortex-a7", "-mfloat-abi=softfp", "-mfpu=neon-vfpv4", "-fno-aggressive-loop-optimizations", "-ffunction-sections", "-fdata-sections", "-fstack-protector-strong", "-fPIC", "-DHI_RELEASE", "-Wno-error=implicit-function-declaration", "-DVER_X=1", "-DVER_Y=0", "-DVER_Z=0", "-DVER_P=0", "-DVER_B=10", "-DUSER_BIT_32", "-DKERNEL_BIT_32", "-Wno-date-time", "-DHI_ACODEC_TYPE_INNER", "-DHI_ACODEC_TYPE_HDMI", "-DNDEBUG", "-o", "build/.objs/ipc_codec/linux/arm/release/mod/codec/ipc/msg_func.c.o", "mod/codec/ipc/msg_func.c"],
+  "file": "mod/codec/ipc/msg_func.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/codec/inc", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/acene_auto", "-Wall", "-Dhi3516cv500", "-DHI_XXXX", "-DISP_V2", "-lstdc++", "-mcpu=cortex-a7", "-mfloat-abi=softfp", "-mfpu=neon-vfpv4", "-fno-aggressive-loop-optimizations", "-ffunction-sections", "-fdata-sections", "-fstack-protector-strong", "-fPIC", "-DHI_RELEASE", "-Wno-error=implicit-function-declaration", "-DVER_X=1", "-DVER_Y=0", "-DVER_Z=0", "-DVER_P=0", "-DVER_B=10", "-DUSER_BIT_32", "-DKERNEL_BIT_32", "-Wno-date-time", "-DHI_ACODEC_TYPE_INNER", "-DHI_ACODEC_TYPE_HDMI", "-DNDEBUG", "-o", "build/.objs/ipc_codec/linux/arm/release/mod/codec/ipc/cfg.c.o", "mod/codec/ipc/cfg.c"],
+  "file": "mod/codec/ipc/cfg.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/codec/inc", "-Imod/mpp/3516dv300/inc", "-Imod/mpp/3516dv300/inc/hisisdk", "-Imod/mpp/3516dv300/common", "-Imod/mpp/3516dv300/acene_auto", "-Wall", "-Dhi3516cv500", "-DHI_XXXX", "-DISP_V2", "-lstdc++", "-mcpu=cortex-a7", "-mfloat-abi=softfp", "-mfpu=neon-vfpv4", "-fno-aggressive-loop-optimizations", "-ffunction-sections", "-fdata-sections", "-fstack-protector-strong", "-fPIC", "-DHI_RELEASE", "-Wno-error=implicit-function-declaration", "-DVER_X=1", "-DVER_Y=0", "-DVER_Z=0", "-DVER_P=0", "-DVER_B=10", "-DUSER_BIT_32", "-DKERNEL_BIT_32", "-Wno-date-time", "-DHI_ACODEC_TYPE_INNER", "-DHI_ACODEC_TYPE_HDMI", "-DNDEBUG", "-o", "build/.objs/ipc_codec/linux/arm/release/mod/codec/ipc/codec.c.o", "mod/codec/ipc/codec.c"],
+  "file": "mod/codec/ipc/codec.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DNDEBUG", "-o", "build/.objs/demo_device/linux/arm/release/nanomsg/src/device_demo.c.o", "nanomsg/src/device_demo.c"],
+  "file": "nanomsg/src/device_demo.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/st/linux/arm/release/fw/libst/src/event.c.o", "fw/libst/src/event.c"],
+  "file": "fw/libst/src/event.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/st/linux/arm/release/fw/libst/src/sync.c.o", "fw/libst/src/sync.c"],
+  "file": "fw/libst/src/sync.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/st/linux/arm/release/fw/libst/src/key.c.o", "fw/libst/src/key.c"],
+  "file": "fw/libst/src/key.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/st/linux/arm/release/fw/libst/src/sched.c.o", "fw/libst/src/sched.c"],
+  "file": "fw/libst/src/sched.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/st/linux/arm/release/fw/libst/src/io.c.o", "fw/libst/src/io.c"],
+  "file": "fw/libst/src/io.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/st/linux/arm/release/fw/libst/src/stk.c.o", "fw/libst/src/stk.c"],
+  "file": "fw/libst/src/stk.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-o", "build/.objs/st/linux/arm/release/fw/libst/src/md.S.o", "fw/libst/src/md.S"],
+  "file": "fw/libst/src/md.S"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/test_lookupdns/linux/arm/release/test/test_st/test_st_lookupdns.c.o", "test/test_st/test_st_lookupdns.c"],
+  "file": "test/test_st/test_st_lookupdns.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DLINUX", "-DMD_HAVE_EPOLL", "-DDEBUG", "-Wall", "-DNDEBUG", "-o", "build/.objs/test_lookupdns/linux/arm/release/test/test_st/res.c.o", "test/test_st/res.c"],
+  "file": "test/test_st/res.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/bsp/inc", "-DNDEBUG", "-o", "build/.objs/bsp_service/linux/arm/release/mod/bsp/src/netinf.c.o", "mod/bsp/src/netinf.c"],
+  "file": "mod/bsp/src/netinf.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/bsp/inc", "-DNDEBUG", "-o", "build/.objs/bsp_service/linux/arm/release/mod/bsp/src/bsp.c.o", "mod/bsp/src/bsp.c"],
+  "file": "mod/bsp/src/bsp.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/bsp/inc", "-DNDEBUG", "-o", "build/.objs/bsp_service/linux/arm/release/mod/bsp/src/sadp.c.o", "mod/bsp/src/sadp.c"],
+  "file": "mod/bsp/src/sadp.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/bsp/inc", "-DNDEBUG", "-o", "build/.objs/bsp_service/linux/arm/release/mod/bsp/src/msg_func.c.o", "mod/bsp/src/msg_func.c"],
+  "file": "mod/bsp/src/msg_func.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/bsp/inc", "-DNDEBUG", "-o", "build/.objs/bsp_service/linux/arm/release/mod/bsp/src/cfg.c.o", "mod/bsp/src/cfg.c"],
+  "file": "mod/bsp/src/cfg.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/bsp/inc", "-DNDEBUG", "-o", "build/.objs/bsp_service/linux/arm/release/mod/bsp/src/rtc.c.o", "mod/bsp/src/rtc.c"],
+  "file": "mod/bsp/src/rtc.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/bsp/inc", "-DNDEBUG", "-o", "build/.objs/bsp_service/linux/arm/release/mod/bsp/src/sjb_bsp.c.o", "mod/bsp/src/sjb_bsp.c"],
+  "file": "mod/bsp/src/sjb_bsp.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/bsp/inc", "-DNDEBUG", "-o", "build/.objs/bsp_service/linux/arm/release/mod/bsp/src/upg.c.o", "mod/bsp/src/upg.c"],
+  "file": "mod/bsp/src/upg.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-Iinclude", "-I.", "-Igtest/include", "-std=c++11", "-DGTEST_HAS_PTHREAD=1", "-DNDEBUG", "-o", "build/.objs/gtest/linux/arm/release/gtest/src/gtest.cpp.o", "gtest/src/gtest.cpp"],
+  "file": "gtest/src/gtest.cpp"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/webs/inc", "-DNDEBUG", "-o", "build/.objs/webs_service/linux/arm/release/mod/webs/src/webs.c.o", "mod/webs/src/webs.c"],
+  "file": "mod/webs/src/webs.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Imod/webs/inc", "-DNDEBUG", "-o", "build/.objs/webs_service/linux/arm/release/mod/webs/src/rawudp.c.o", "mod/webs/src/rawudp.c"],
+  "file": "mod/webs/src/rawudp.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-DNDEBUG", "-o", "build/.objs/test_timer/linux/arm/release/test/test_timer/test_timer.c.o", "test/test_timer/test_timer.c"],
+  "file": "test/test_timer/test_timer.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fvisibility=hidden", "-O3", "-Iinclude", "-I.", "-Ifw/cfifo/test", "-DNDEBUG", "-o", "build/.objs/test_shm_write/linux/arm/release/fw/cfifo/test/test_shm_write.c.o", "fw/cfifo/test/test_shm_write.c"],
+  "file": "fw/cfifo/test/test_shm_write.c"
+},
+{
+  "directory": "/home/hugh/GIT/hview",
+  "arguments": ["/opt/hisi-linux/x86-arm/arm-himix200-linux/bin/arm-himix200-linux-gcc", "-c", "-fPIC", "-O3", "-Iinclude", "-I.", "-Ifw/comm/inc", "-DNDEBUG", "-o", "build/.objs/comm/linux/arm/release/fw/comm/src/serial.c.o", "fw/comm/src/serial.c"],
+  "file": "fw/comm/src/serial.c"
+}]

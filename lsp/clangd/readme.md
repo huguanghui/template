@@ -1,1 +1,1 @@
-# clangd相关配置
+# clangd 相关配置
