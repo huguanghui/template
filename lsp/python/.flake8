@@ -1,0 +1,39 @@
+[flake8]
+max-line-length = 100
+exclude =
+    .git
+    __pycache__
+    migrations
+    manage.py
+    local_settings.py
+    media
+    test_fixtures
+
+dlint = ["+*"]  # https://github.com/duo-labs/dlint/tree/master/docs
+flake8-annotations = ["+*",]  # https://github.com/python-discord/flake8-annotations
+flake8-bandit = ["+*"]  # https://github.com/tylerwince/flake8-bandit
+flake8-broken-line = ["+*"]  # https://github.com/sobolevn/flake8-broken-line
+flake8-bugbear = ["+*"]  # https://github.com/PyCQA/flake8-bugbear
+flake8-builtins = ["+*"]  # https://github.com/gforcada/flake8-builtins
+flake8-commas = ["+*"]  # https://github.com/PyCQA/flake8-commas/
+flake8-comprehensions = ["+*"]  # https://pypi.org/project/flake8-comprehensions/
+flake8-debugger = ["+*"]  # https://github.com/jbkahn/flake8-debugger
+flake8-django = ["+*"]  # https://pypi.org/project/flake8-django/
+flake8-pep3101 = ["+*"]  # https://github.com/gforcada/flake8-pep3101
+flake8-print = ["+*"]  # https://github.com/jbkahn/flake8-print
+flake8-quotes = ["+*"]  # https://github.com/zheller/flake8-quotes
+flake8-string-format = ["+*"]  # https://github.com/xZise/flake8-string-format
+flake8-variables-names = ["+*"]  # https://github.com/best-doctor/flake8-variables-names
+mccabe = ["+*"]  # https://github.com/pycqa/mccabe
+pep8-naming = ["+*"]  # https://github.com/PyCQA/pep8-naming
+pycodestyle = ["+*"]  # https://pycodestyle.readthedocs.io/en/latest/
+pylint = ["+*"]  # https://docs.pylint.org/en/1.6.0/features.html
+
+ignore =
+    ANN101  # typing for self
+    ANN102  # typing for cls
+    S101    # use of assert
+    ANN204  # return type annotation for special methods
+    W503    # line break before binary operator
+    W504    # line break after binary operator
+    VNE002  # variable name should be clarified
