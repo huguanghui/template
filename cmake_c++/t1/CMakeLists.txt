@@ -3,6 +3,8 @@ project(mini C)
 
 set(CMAKE_C_STANDARD 99)
 
+set(CMAKE_VERBOSE_MAKEFILE OFF)
+
 # set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 # find_package(HiSiliconSDK REQUIRED)
