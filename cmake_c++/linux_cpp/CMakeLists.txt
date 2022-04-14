@@ -1,0 +1,34 @@
+cmake_minimum_required(VERSION 3.12)
+
+# if(POLICY CMP0090)
+#     cmake_policy(SET CMP0090 NEW)
+# endif()
+
+project(demo VERSION 0.0.1)
+
+set(CMAKE_C_STANDARD 99)
+
+enable_language(C CXX ASM)
+
+# 编译调试开关 set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_VERBOSE_MAKEFILE OFF)
+
+# set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
+# "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+
+# find_package(HiSiliconSDK REQUIRED)
+find_package(Threads REQUIRED)
+
+include_directories(
+  src include
+  # ${VENDOR_SDK_INCLUDE_DIRS}
+)
+
+link_directories(lib)
+
+add_executable(test src/main.cc)
+
+target_compile_features(test PUBLIC cxx_std_11)
+target_link_libraries(test Threads::Threads dl m rt stdc++)
+
+install(TARGETS test RUNTIME DESTINATION bin)
