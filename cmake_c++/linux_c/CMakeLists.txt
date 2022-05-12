@@ -23,8 +23,10 @@ include_directories(
 
 link_directories(lib)
 
-add_executable(test src/main.c)
+set(PROC_NAME "test")
 
-target_link_libraries(test Threads::Threads dl m rt stdc++)
+add_executable(${PROC_NAME} src/main.c)
 
-install(TARGETS test RUNTIME DESTINATION bin)
+target_link_libraries(${PROC_NAME} Threads::Threads dl m rt stdc++)
+
+install(TARGETS ${PROC_NAME} RUNTIME DESTINATION bin)

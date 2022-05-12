@@ -30,9 +30,10 @@ include_directories(
 
 link_directories(lib)
 
-add_executable(test src/main.cc)
+set(PROC_NAME "test")
+add_executable(${PROC_NAME} src/main.cc)
 
-target_compile_features(test PUBLIC cxx_std_11)
-target_link_libraries(test Threads::Threads dl m rt stdc++)
+target_compile_features(${PROC_NAME} PUBLIC cxx_std_11)
+target_link_libraries(${PROC_NAME} Threads::Threads dl m rt stdc++)
 
-install(TARGETS test RUNTIME DESTINATION bin)
+install(TARGETS ${PROC_NAME} RUNTIME DESTINATION bin)
