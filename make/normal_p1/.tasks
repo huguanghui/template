@@ -1,0 +1,18 @@
+# vim: set fenc=utf-8 ft=dosini:
+# see: https://github.com/skywind3000/asynctasks.vim/wiki/Task-Config
+
+[project-init]
+command=make clean;bear make
+cwd=<root>
+
+[project-build]
+command=make
+cwd=<root>
+errorformat=%. %#--> %f:%l:%c
+save=1
+
+[project-run]
+command=
+cwd=<root>
+output=quickfix
+
