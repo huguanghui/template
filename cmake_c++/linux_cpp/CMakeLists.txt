@@ -30,6 +30,8 @@ include_directories(
 
 link_directories(lib)
 
+# aux_source_directory(bm BM_SRC)
+
 set(PROC_NAME "test")
 add_executable(${PROC_NAME} src/main.cc)
 

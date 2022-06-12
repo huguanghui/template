@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(demo C)
+project(demo VERSION 0.0.1)
 
 set(CMAKE_C_STANDARD 99)
+
+enable_language(C CXX ASM)
 
 # 编译调试开关 set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_VERBOSE_MAKEFILE OFF)
@@ -22,6 +24,8 @@ include_directories(
 )
 
 link_directories(lib)
+
+# aux_source_directory(bm BM_SRC)
 
 set(PROC_NAME "test")
 
