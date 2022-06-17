@@ -19,18 +19,12 @@ set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/_install")
 find_package(Threads REQUIRED)
 
 include_directories(
-  src include
+  src inc
   # ${VENDOR_SDK_INCLUDE_DIRS}
 )
 
 link_directories(lib)
 
 # aux_source_directory(bm BM_SRC)
-
-set(PROC_NAME "test")
-
-add_executable(${PROC_NAME} src/main.c)
-
-target_link_libraries(${PROC_NAME} Threads::Threads dl m rt stdc++)
-
-install(TARGETS ${PROC_NAME} RUNTIME DESTINATION bin)
+add_subdirectory(src)
+add_subdirectory(test)
