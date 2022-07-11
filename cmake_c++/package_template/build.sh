@@ -12,7 +12,7 @@ for i in ${BUILD_TYPE_ARRAY}; do
     -DCMAKE_BUILD_TYPE=$BUILD_TYPE \
     -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
     -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR \
-    # -DCMAKE_TOOLCHAIN_FILE=tools/cmake/toolchains/mips-linux-gnu-t40.cmake
+    -DCMAKE_TOOLCHAIN_FILE=tools/cmake/toolchains/mips-linux-gnu-t40.cmake
   # -DPLATFORM_SDK_DIR=<PATH_TO_SDK> \
   cmake --build ${BUILD_DIR}
   cmake --install ${BUILD_DIR}

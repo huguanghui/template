@@ -1,0 +1,52 @@
+mainmenu "Main Menu"
+
+comment "This is a menu to pack"
+
+choice
+    prompt "PRODUCT"
+    default PRODUCT_T40_WEBRTC
+
+    config  PRODUCT_T40_WEBRTC
+        bool "T40_WEBRTC"
+
+endchoice
+
+choice
+    prompt "CUSTOM"
+    default CUSTOM_NORMAL
+
+    config CUSTOM_NORMAL
+        bool "Normal"
+
+    config CUSTOM_SZLIONKING
+        depends on PRODUCT_T40_WEBRTC
+        bool "ABC"
+
+endchoice
+
+choice
+    prompt "NetWork"
+    default NET_ETH_WLAN
+
+    config NET_WLAN
+        depends on PRODUCT_T40_WEBRTC
+        bool "WLAN"
+
+    config NET_ETH_WLAN
+        depends on PRODUCT_T40_WEBRTC
+        bool "ETH_WLAN"
+
+endchoice
+
+choice
+    prompt "Lanuage"
+    default LANG_CN
+
+    config LANG_ZH
+        bool "Chinese"
+
+    config LANG_EN
+        bool "English"
+
+endchoice
+
