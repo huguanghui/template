@@ -1,0 +1,9 @@
+[Unit]
+Description=Clash Daemon
+
+[Service]
+ExecStart=/usr/local/bin/clash -d /etc/clash/
+Restartn-failure
+
+[Insta]
+WantedBy=lti-user.tet
