@@ -1,0 +1,16 @@
+[Unit]
+Description=nginx - high performance web server
+Documentation=http://nginx.org/en/docs
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/usr/local/nginx/nginx.pid
+ExecStartPre=/root/nginx/sbin/nginx -t -c /root/nginx/conf/nginx.conf
+ExecStart=/root/nginx/sbin/nginx -c /root/nginx/conf/nginx.conf -p /root/nginx
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
