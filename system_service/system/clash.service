@@ -3,7 +3,7 @@ Description=Clash Daemon
 
 [Service]
 ExecStart=/usr/local/bin/clash -d /etc/clash/
-Restartn-failure
+Restart=on-failure
 
-[Insta]
-WantedBy=lti-user.tet
+[Install]
+WantedBy=multi-user.target
