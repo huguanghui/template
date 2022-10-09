@@ -3,6 +3,8 @@
 #include <signal.h>
 #include <sys/wait.h>
 #include <semaphore.h>
+#include <sys/prctl.h>
+#include <pthread.h>
 
 static sem_t main_run_sem;
 int g_runiing = 0;
@@ -46,11 +48,27 @@ static void capture_all_signal()
     return;
 }
 
+void *check_task(void *parm)
+{
+    prctl(PR_SET_NAME, __FUNCTION__);
+    pthread_detach(pthread_self());
+
+    while (g_runiing) {
+        sleep(5);
+    }
+
+    return NULL;
+}
+
 int main(int argc, char *argv[])
 {
     capture_all_signal();
     printf("[HGH-TEST][%s %d] test\n", __FUNCTION__, __LINE__);
     sem_init(&main_run_sem, 0, 0);
+
+    pthread_t check_task_id;
+    g_runiing = 1;
+    pthread_create(&check_task_id, NULL, check_task, NULL);
 
     sem_wait(&main_run_sem);
     int timer = 0;
