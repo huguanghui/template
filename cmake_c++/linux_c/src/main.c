@@ -7,7 +7,7 @@
 #include <pthread.h>
 
 static sem_t main_run_sem;
-int g_runiing = 0;
+int g_runing = 0;
 
 static void signal_hander(int signal)
 {
@@ -51,10 +51,9 @@ static void capture_all_signal()
 void *check_task(void *parm)
 {
     prctl(PR_SET_NAME, __FUNCTION__);
-    pthread_detach(pthread_self());
 
-    while (g_runiing) {
-        sleep(5);
+    while (g_runing) {
+        sleep(1);
     }
 
     return NULL;
@@ -67,18 +66,12 @@ int main(int argc, char *argv[])
     sem_init(&main_run_sem, 0, 0);
 
     pthread_t check_task_id;
-    g_runiing = 1;
+    g_runing = 1;
     pthread_create(&check_task_id, NULL, check_task, NULL);
 
     sem_wait(&main_run_sem);
-    int timer = 0;
-    while (1) {
-        timer++;
-        if (timer > 100) {
-            break;
-        }
-        usleep(10 * 1000);
-    }
+    g_runing = 0;
+    pthread_join(check_task_id, NULL);
     sem_destroy(&main_run_sem);
 
     return 0;
