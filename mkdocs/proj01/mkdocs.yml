@@ -1,0 +1,52 @@
+site_name: 君正安防项目
+
+theme:
+    name: material
+    locale: zh
+    features:
+        - navigation.top
+        - navigation.tracking
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.sections
+
+plugins:
+    - i18n:
+          default_language: zh
+          languages:
+              zh:
+                  name: 简体中文
+                  site_name: 君正安防项目
+              en:
+                  name: English
+                  site_name: Ingeric Project
+          nav_translations:
+              zh:
+                  Home: 主页
+                  Environment: 编译环境
+                  Functions: 功能模块
+                  Build: 编译
+                  For Developers: 开发者手册
+                  About: 关于我们
+              en:
+                  Home: Home
+                  Environment: Environment
+                  Functions: Functions
+                  Build: build
+                  For Developers: For Developers
+                  About: About
+          material_alternate: true
+
+nav:
+    - Home:
+          - index.md
+    - Environment:
+          - Build: topic1/build.md
+          - Pack: topic1/pack.md
+    - Functions:
+          - topic2/fun_zbar.md
+    - For Developers:
+          - API: developer/api.md
+          - SDK: developer/sdk.md
+    - Q&A: qa.md
+    - About: about.md
