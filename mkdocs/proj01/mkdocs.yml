@@ -1,4 +1,7 @@
 site_name: 君正安防项目
+docs_dir: docs
+site_url:
+use_directory_urls: False
 
 theme:
     name: material
