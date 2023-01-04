@@ -2,9 +2,9 @@
 
 echo "cross compile ..."
 ROOT_PATH=$(pwd)
-CROSS_COMPILE=mips-linux-uclibc-gnu-gcc
+CROSS_COMPILE=mips-linux-gnu-gcc
 CROSS_HOST=mips-linux-gnu
-CROSS_PREFIX=mips-linux-uclibc-gnu-
+CROSS_PREFIX=mips-linux-gnu-
 
 OPENSSL_URL=https://www.openssl.org/source/old/1.1.1/openssl-1.1.1q.tar.gz
 OPENSSL_PACKAGE=openssl-1.1.1q.tar.gz
@@ -43,7 +43,7 @@ if [ -d $ROOT_PATH/$OPENSSL_DIR/.tmp ]; then
   rm -rf $ROOT_PATH/$OPENSSL_DIR/.tmp
 fi
 mkdir -p $ROOT_PATH/$OPENSSL_DIR/.tmp
-./Configure no-asm no-shared no-async no-threads linux-mips32 --cross-compile-prefix=mips-linux-uclibc-gnu- --prefix=$(pwd)/_install
+./Configure no-asm no-shared no-async no-threads linux-mips32 --cross-compile-prefix=mips-linux-gnu- CFLAGS="-muclibc -march=mips32r2" CXXFLAGS="-muclibc -march=mips32r2" LDFLAGS="-muclibc" --prefix=$(pwd)/_install
 sed -i "s/ -m64//g" ./Makefile
 
 # Build
