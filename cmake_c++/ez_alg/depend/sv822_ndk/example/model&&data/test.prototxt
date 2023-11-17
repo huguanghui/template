@@ -1,0 +1,93 @@
+layer {
+  name: "data"
+  type: "Input"
+  top: "data"
+  input_param {
+    shape {
+      dim: 1
+      dim: 3
+      dim: 64
+      dim: 64
+    }
+  }
+}
+layer {
+  name: "convolution"
+  type: "Convolution"
+  bottom: "data"
+  top: "convolution"
+  convolution_param {
+    num_output: 32
+    kernel_h: 3
+    kernel_w: 3
+    pad_h: 1
+    pad_w: 1
+    stride_h: 1
+    stride_w: 1
+    bias_term: false
+  }
+
+  quantization_param {
+    bw_layer_in: 8
+    fl_layer_in: 7
+    bw_layer_out: 8
+    bw_params: 8
+    fl_layer_out: 5
+    fl_params: 5
+  }
+}
+
+layer {
+  name: "axpy"
+  type: "Python"
+  bottom: "convolution"
+  top: "axpy"
+  top: "alpha"
+  python_param {
+    module: "CustomOp"
+    layer: "AxPyLayer"
+    param_str: "alpha: 0.12\nbeta: 0.5"
+  }
+
+  quantization_param {
+    bw_layer_out: 8
+    fl_layer_out: 6
+	bw_params: 8
+    fl_params: 5
+  }
+}
+
+layer {
+  name: "gen_const"
+  type: "Python"
+  bottom: "convolution"
+  top: "gen_const"
+  python_param {
+    module: "CustomOp"
+    layer: "ConstLayer"
+    param_str: "shape: [1,16,64,64]\nconst: 0.2"
+  }
+
+  quantization_param {
+    bw_layer_out: 8
+    fl_layer_out: 7
+	bw_params: 8
+    fl_params: 5
+  }
+}
+
+layer {
+  name: "mul1"
+  type: "Eltwise"
+  bottom: "convolution"
+  bottom: "axpy"
+  top: "mul1"
+  eltwise_param {
+    operation: PROD
+  }
+  quantization_param {
+    bw_layer_out: 8
+    fl_layer_out: 6
+  }
+}
+
