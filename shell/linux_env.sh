@@ -129,6 +129,10 @@ welcome () {
 
 # }}}
 
+# rsync -avz -e "ssh -p 5022" /usr/local/bin/clash hgh@1.13.20.3:/volume1/homes/hgh/software/linux/clash
+# rsync -avz -e "ssh -p 5022" hgh@1.13.20.3:/volume1/homes/hgh/software/linux/clash .
+# rsync -avz -e "ssh -p 5022" hgh@1.13.20.3:/volume1/homes/hgh/software/linux/frp .
+
 ### main {{{
 main () {
   welcome
