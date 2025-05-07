@@ -1,0 +1,33 @@
+site_name: Project Name
+docs_dir: docs
+site_url:
+use_directory_urls: False
+
+theme:
+    name: material
+    palette:
+        primary: teal
+        accent: deep orange
+    locale: zh
+    features:
+        - navigation.top
+        - navigation.tracking
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - content.code.copy
+
+plugins:
+    - search
+    - mkdocstrings
+
+nav:
+    - 主页:
+          - index.md
+    - 环境搭建:
+        - 开发环境: env/env.md
+    - 功能模块:
+        - 功能1: func/func_0.md
+    - 开发者手册:
+        - API: dev/api.md
+    - Q&A: qa.md
+    - 关于我们: about.md
