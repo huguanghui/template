@@ -1,0 +1,13 @@
+items:
+  - label: 进程间协议
+    collapsed: false
+    items:
+      - file: inner/api_ui_lvgl.md
+        label: 内部_UI_LVGL
+
+  - label: 协议相关
+    collapsed: false
+    items:
+      - file: p/msg_app.md
+        label: APP通信协议
+

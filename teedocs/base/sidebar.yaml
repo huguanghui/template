@@ -1,0 +1,16 @@
+items:
+  - file: README.md
+    label: 快速开始
+  - file: todo.md
+    label: 待办事项
+  - file: faq.md
+    label: FAQ 常见问题
+
+  - file: func.md
+    label: 功能模块
+
+  - label: 外设模块
+    items:
+      - file: peripheral_device/gpio.md
+        label: GPIO
+
