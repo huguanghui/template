@@ -1,0 +1,6 @@
+matches:
+  - trigger: ":mtyh"
+    replace: "mount"
+
+  - trigger: ":tmat"
+    replace: "tmux at -t comm\n"
