@@ -4,3 +4,43 @@ matches:
 
   - trigger: ":tmat"
     replace: "tmux at -t comm\n"
+
+  - trigger: ":bootl"
+    replace: "fatload mmc 0 0x806000000 boot.bin\n"
+
+  - trigger: ":boote"
+    replace: "nand erase 0x0 0x100000\n"
+
+  - trigger: ":bootw"
+    replace: "nand write 0x806000000 0x0 0x100000\n"
+
+  - trigger: ":kernl"
+    replace: "fatload mmc 0 0x806000000 uimage\n"
+
+  - trigger: ":kerne"
+    replace: "nand erase 0x120000 0x300000\n"
+
+  - trigger: ":kernw"
+    replace: "nand write 0x806000000 0x120000 0x300000\n"
+
+  - trigger: ":rootl"
+    replace: "fatload mmc 0 0x806000000 rootfs.bin\n"
+
+  - trigger: ":roote"
+    replace: "nand erase 0x720000 0x800000\n"
+
+  - trigger: ":rootw"
+    replace: "nand write 0x806000000 0x720000 0x800000\n"
+
+  - trigger: ":appl"
+    replace: "fatload mmc 0 0x806000000 appfs.ubi\n"
+
+  - trigger: ":appe"
+    replace: "nand erase 0x1720000 0x68e0000\n"
+
+  - trigger: ":appw"
+    replace: "nand write 0x806000000 0x1720000 0xEA0000\n"
+
+  - trigger: ":ca"
+    replace: "cp /mnt/card/album.bin /root/ -v\n"
+
