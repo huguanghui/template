@@ -44,3 +44,11 @@ matches:
   - trigger: ":ca"
     replace: "cp /mnt/card/album.bin /root/ -v\n"
 
+  - trigger: ":ssh-yh"
+    replace: "ssh -p 4000 yh@1.13.20.3\n"
+
+  - trigger: ":ssh-h0"
+    replace: "ssh -p 6022 hgh@1.13.20.3\n"
+
+  - trigger: ":ssh-h1"
+    replace: "ssh -p 3000 hgh@1.13.20.3\n"
