@@ -147,3 +147,72 @@ openclaw status
 
 祝你顺利部署出自己的“龙虾 Jarvis”！🦞  
 有具体报错或想接哪个渠道/模型，再贴日志我帮你 debug。
+
+**OpenClaw**（曾用名 Clawdbot / Moltbot）是2026年初爆火的开源个人AI助手项目，GitHub星标迅速突破数十万甚至20万+，核心口号是“The AI that actually does things”——它不是单纯聊天机器人，而是真正能“做事”的自托管AI Agent运行时平台。
+
+它由一位独立开发者（Peter Steinberger）主导开发，主打**本地优先、自托管、隐私可控、多渠道接入**，可以像“数字员工”一样24/7运行，帮你处理文件、发消息、浏览器操作、日程管理、代码相关任务等。
+
+### 核心技术栈（2026年主流版本）
+
+| 层次          | 技术选型                              | 说明                                                                 |
+|---------------|---------------------------------------|----------------------------------------------------------------------|
+| 主要语言      | TypeScript                           | 几乎全栈TS，代码可读性高，便于社区扩展                               |
+| 运行时        | Node.js ≥22                          | 单进程运行，依赖新版Node的特性（如原生SQLite支持更好）               |
+| 存储层        | SQLite + sqlite-vec + FTS5           | 本地优先：单文件数据库 + 向量检索 + 全文搜索，实现长期记忆与混合检索 |
+| 网关/通信     | Express + ws (WebSocket)             | Gateway是核心枢纽，端口默认127.0.0.1:18789，所有渠道都连这里         |
+| 前端/界面     | 内置Web UI + TUI (终端) + 原生App    | 支持macOS App、Web、CLI，不同客户端通过WS通信                         |
+| 插件/扩展     | 36+ 官方extension + 5000+社区Skills  | Skills用Markdown定义，极易编写和分享                                 |
+| 模型支持      | Claude系列（主力）/ GPT / Gemini / Ollama本地模型 / 国内千问、Kimi、GLM等 | 通过API调用，模型能力决定上限                                       |
+| 部署方式      | npm全局安装 / Docker / VPS / 云Mac   | 最常见是一行命令全局安装，也支持云端Mac实现苹果生态深度自动化         |
+
+整体架构属于**Hub-and-Spoke（中心辐射）**模式：  
+Gateway作为单点控制面 → 各种消息渠道（WhatsApp/Telegram/Slack/飞书/钉钉/iMessage等）作为 spokes → Agent Runtime负责任务调度、工具调用、记忆管理。
+
+### 常用使用技巧与高阶玩法（从入门到进阶）
+
+1. **最快上手（5分钟跑起来）**
+   ```bash
+   npm install -g openclaw@latest
+   openclaw setup          # 引导配置模型API Key
+   openclaw tui            # 终端聊天模式快速体验
+   # 或
+   openclaw dashboard      # 浏览器打开Web管理面板（推荐）
+   ```
+
+2. **最实用配置组合（大多数人最终会用的）**
+   - 模型：Claude 4系列（Opus/Sonnet）或国内千问/GLM-4（性价比高）
+   - 记忆：开启MEMORY.md + sqlite-vec向量检索（长期事实放这里）
+   - 渠道：Telegram/WhatsApp（手机最方便） + Web Dashboard
+   - 工具权限：默认只开低危工具，先别全开（安全第一）
+   - 预算控制：在openclaw.json里设置max_spend_per_day
+
+3. **高频实用Skills / Tools组合**
+   - 文件管理：find_file / read_file / write_file（找发票、整理文档神器）
+   - 浏览器自动化：webfetch（轻量抓取） → OpenClawManaged / RelayExtension（完整接管Chrome）
+   - 邮件/日程：gmail + calendar（自动回邮件、安排会议）
+   - 代码相关：git操作 + code_edit（但烧token，建议只给coding专属workspace）
+   - 监控类：定时任务 + RSS/舆情监控（24h盯竞品/热点）
+
+4. **进阶技巧（真正把生产力拉满的玩法）**
+   - **Workspace隔离**：给不同身份建独立空间（工作/个人/副业），权限、记忆、模型都可不同
+   - **子Agent编排**：主Agent调用子Agent（例如研究Agent → 写作Agent → 发布Agent）
+   - **MCP（Multi-Channel Presence）**：同一只龙虾同时出现在微信/飞书/钉钉/Slack，统一大脑多端同步
+   - **自定义Skill开发**：最简单方式——写个.md扔到skills目录，格式参考官方例子，基本功是写好tool schema + 清晰的few-shot示例
+   - **安全加固**（强烈建议）：
+     - Gateway只绑localhost或走内网穿透（frp/Cloudflare Tunnel）
+     - 开启严格的tool permission白名单
+     - 定期备份 ~/.openclaw 整个目录
+     - 重要操作加人工确认（confirm_before_exec）
+
+5. **最烧钱的几个雷区（避坑指南）**
+   - 别让它无限制跑循环任务（容易几百刀没了）
+   - 浏览器完整接管模式非常吃token（建议只在必要时开启）
+   - 一次性给太多系统权限（容易误删文件或泄露隐私）
+
+一句话总结目前OpenClaw的最佳使用姿势：
+
+> 用Claude驱动 + Telegram随时对话 + sqlite-vec做长期记忆 + 精选10-15个低危Skill + 云端VPS/Mac mini 7×24挂机
+
+这样基本就能实现“扔一句需求，它自己搞定”的个人生产力飞跃感。
+
+有具体场景（例如想用来做竞品监控、自动写周报、苹果生态自动化等）可以继续细聊，我可以帮你给出更针对性的配置方案～ 🦞
