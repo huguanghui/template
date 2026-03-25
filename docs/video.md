@@ -163,3 +163,33 @@ gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw,width=3840,height=2160 !
 ```
 
 如果这个命令能跑通（不报错），说明硬件链路是通的，只是 `v4l2-ctl` 的参数校验比较死板。
+
+```
+gst-launch-1.0 videotestsrc pattern=18 !     videoconvert !     video/x-raw,format=BGRx,width=2560,height=1440 !     kmssink driver-name=rockchip connector-id=208 plane-id=57
+gst-launch-1.0 v4l2src device=/dev/video0 ! videoconvert ! video/x-raw,format=BGRx,width=2560,height=1440 ! kmssink driver-name=rockchip
+connector-id=208 plane-id=57
+```
+
+操作分析
+
+```
+gst-launch-1.0 v4l2src device=/dev/video0 ! videoconvert ! video/x-raw,format=BGRx,width=1920,height=1080 ! kmssink driver-name=rockchip
+connector-id=208 plane-id=57 force-aspect-ratio=false sync=false
+```
+
+```
+gst-launch-1.0 v4l2src device=/dev/video0 ! videoconvert ! video/x-raw,format=BGRx ! kmssink driver-name=rockchip connector-id=208 plane-id=57 force-aspect-ratio=true sync=false
+```
+
+```
+root@orangepi5plus:~# v4l2-ctl -d /dev/video0 --set-dv-bt-timings index=16
+BT timings set
+root@orangepi5plus:~# gst-launch-1.0 v4l2src device=/dev/video0 ! kmssink driver-name=rockchip connector-id=208 plane-id=57 force-aspect-ratio=false sync=false
+```
+
+```
+gst-launch-1.0 v4l2src device=/dev/video0 ! \
+    tee name=t \
+    t. ! queue ! kmssink driver-name=rockchip connector-id=208 plane-id=57 force-aspect-ratio=true sync=false \
+    t. ! queue ! filesink location=alg_input.raw
+```
