@@ -140,4 +140,23 @@ export OPENROUTER_API_KEY=你的Key
 aider --model openrouter/anthropic/claude-3.5-sonnet
 ```
 
-配置完成后，你只需输入 `aider` 就能像带了一个精通驱动开发的专家一样写代码了。
+
+## aider + github_copilot 的组合
+
+### 查询支持模型
+
+```bash
+curl https://api.githubcopilot.com/models \
+  -H "Authorization: Bearer $GITHUB_COPILOT_TOKEN" \
+  -H "Copilot-Integration-Id: vscode-chat" \
+  -H "User-Agent: GitHubCopilot/1.388.0" \
+  -H "Editor-Version: vscode/1.105.1" | jq -r '.data[].id'
+```
+
+### aider配置
+
+```bash
+OPENAI_API_BASE=$GITHUB_URL \
+OPENAI_API_KEY=$GITHUB_KEY \
+aider --model github_copilot/gpt-4o-mini
+```
