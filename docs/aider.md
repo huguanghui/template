@@ -4,105 +4,107 @@
 
 针对你正在进行的 **嵌入式驱动开发（C 语言/内核/U-Boot）**，以下是完整的环境配置指南：
 
-## 使用
-
-### 1. 基础环境安装
-
-`aider` 是基于 Python 的，建议安装在虚拟环境中以保持系统干净。
+## 安装
 
 ```bash
-# 1. 安装 pip（如果还没有）
-sudo apt update
-sudo apt install python3-pip python3-venv git -y
-
-# 2. 创建并激活虚拟环境（推荐）
-python3 -m venv ~/.aider-env
-source ~/.aider-env/bin/activate
-
-# 3. 安装 aider
-pip install aider-chat
+python -m pip install aider-install
+aider-install
 ```
 
----
+## 对接LLMs
 
-### 2. 配置 API Key (核心步骤)
-
-`aider` 默认推荐使用 **Claude 3.5 Sonnet**（编程能力目前最强）。
-
-你需要将你的 Anthropic API Key 写入环境变量（建议放入 `~/.bashrc` 或 `~/.zshrc` 中）：
+### OpenRouter
 
 ```bash
-# 编辑配置文件
-nano ~/.bashrc
+export OPENROUTER_API_KEY=<key> # Mac/Linux
+setx   OPENROUTER_API_KEY <key> # Windows, restart shell after setx
 
-# 在末尾添加（替换为你自己的 Key）
-export ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxx
-
-# 保存退出后刷新
-source ~/.bashrc
+aider --list-models openrouter
 ```
 
-_注：如果你想使用 OpenAI 或 OpenRouter（省钱或用国内模型），可以对应设置 `OPENAI_API_KEY` 或 `OPENROUTER_API_KEY`。_
-
----
-
-### 3. 在项目中使用 aider
-
-`aider` 必须在 **Git 仓库** 中运行，因为它会根据 AI 的修改自动生成 Commit。
+### GitHub Copilot
 
 ```bash
-# 进入你的内核或驱动代码目录
-cd ~/work/axera_driver_project
+# macOS/Linux
+export OPENAI_API_BASE=https://api.githubcopilot.com
+export OPENAI_API_KEY=<oauth_token>
 
-# 确保已经初始化 git
-git init  # 如果还没初始化的话
+# Windows (PowerShell)
+setx OPENAI_API_BASE https://api.githubcopilot.com
+setx OPENAI_API_KEY  <oauth_token>
+# …restart the shell after setx commands
 
-# 启动 aider
-aider
+# oauth_token 获取
+~/.config/github-copilot/apps.json
+~\AppData\Local\github-copilot\apps.json
+
+
+# 查询支持模型
+curl -s https://api.githubcopilot.com/models \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -H "Copilot-Integration-Id: vscode-chat" | jq -r '.data[].id'
+
 ```
 
----
+## 配置文件
 
-### 4. 针对嵌入式开发的 Aider 进阶配置
+```bash
+project/.aider.conf.yml
+~/.aider.conf.yml
+```
 
-由于驱动开发涉及大量底层宏定义和头文件，建议通过配置文件优化 aider。
+### 配置项说明
 
-#### A. 创建全局配置文件
+| 参数             | **类型** | **含义&技巧**      | **示例** |
+| ---------------- | -------- | ------------------ | -------- |
+| **model**        | 字符串   | 模型选择           |          |
+| **auto-commits** | bool     | 自动commit消息模板 | true     |
 
-在你的家目录下创建 `~/.aider.conf.yml`：
+参考
 
 ```yaml
-# 使用模型
-model: anthropic/claude-3-5-sonnet-20240620
+# ~/.aider.conf.yml（复制粘贴，重启 Aider）
+model: qwen2.5-coder:72b # 免费国产 GPT-4o
+api-base: https://dashscope.aliyuncs.com/compatible-mode/v1
+api-key: $DASHSCOPE_API_KEY # 环境变量
 
-# 自动提交 Git（建议开启，方便回滚）
+# Git 自动化（生产力核心）
 auto-commits: true
+auto-commits-message: "feat: {{changes}} by Aider ({{model}})"
+message-match: "aider:"
 
-# 自动检查 lint（如果是 Python 很有用，C 语言可以手动通过 Makefile 检查）
-# lint-cmd: make -j4
+# 文件过滤（Python 项目）
+include:
+  - "*.py"
+  - "*.md"
+exclude:
+  - "**/__pycache__/**"
+  - "tests/**"
 
-# 是否启用实时监控文件变化
-watch: true
+# LLM 调优（代码质量+）
+temperature: 0.1
+top-p: 0.9
+max-tokens: 8192
 
-# 界面风格
-theme: dark
+# Ooutput settings
+
+## Use colors suitable for a dark terminal background (default: False)
+dark-mode: false
+
+## Use colors suitable for a light terminal background (default: False)
+light-mode: false
+
+## Enable/disable pretty, colorized output (default: True)
+pretty: true # Rich 高亮
+
+## Enable/disable streaming responses (default: True)
+stream: true
+
+verbose: true # 调试日志
 ```
 
-#### B. 配合 C 语言开发的技巧
-
-在进入 `aider` 后，使用命令添加上下文：
-
-1. **添加相关文件**：
-    `/add board.c gpio.h` (把这两个文件喂给 Claude)。
-2. **参考头文件**：
-    如果你需要它参考内核头文件但不想让它改头文件，可以使用 `/read-only include/linux/gpio.h`。
-3. **让它修编译错误**：
-    如果你 `make` 报错了，直接把错误贴给它：
-    `"/run make -j4"` (它会运行编译命令并根据报错自动改代码)。
-
----
-
-### 5. 常用快捷指令
+### 常用快捷指令
 
 在 `aider` 的对话框内：
 
@@ -112,51 +114,4 @@ theme: dark
 - `/undo`: **神器！** 撤销上一次 AI 的修改和 Commit（写错代码瞬间恢复）。
 - `/exit`: 退出。
 
----
-
-### 6. 嵌入式开发典型工作流示例
-
-假设你要给你的 **Axera ADC 驱动** 增加一个平均值滤波算法：
-
-1. 运行 `aider`。
-2. 输入：`/add drivers/adc/ax_adc.c`。
-3. 对话：`"请给 adc_read 函数增加一个 10 次采样的平均值滤波算法，注意不要阻塞中断。"`。
-4. Aider 会展示代码 Diff，确认后自动写回文件并 `git commit`。
-5. 对话：`"/run make"`（检查是否编译通过）。
-
-### 7. 解决网络问题（如果在中国国内）
-
-如果你无法直接连接 Anthropic 服务器，可以在启动前设置代理：
-
-```bash
-export https_proxy=http://127.0.0.1:你的代理端口
-aider
-```
-
-或者使用 **OpenRouter** 作为中转（支持 Claude 3.5）：
-
-```bash
-export OPENROUTER_API_KEY=你的Key
-aider --model openrouter/anthropic/claude-3.5-sonnet
-```
-
-
-## aider + github_copilot 的组合
-
-### 查询支持模型
-
-```bash
-curl https://api.githubcopilot.com/models \
-  -H "Authorization: Bearer $GITHUB_COPILOT_TOKEN" \
-  -H "Copilot-Integration-Id: vscode-chat" \
-  -H "User-Agent: GitHubCopilot/1.388.0" \
-  -H "Editor-Version: vscode/1.105.1" | jq -r '.data[].id'
-```
-
-### aider配置
-
-```bash
-OPENAI_API_BASE=$GITHUB_URL \
-OPENAI_API_KEY=$GITHUB_KEY \
-aider --model github_copilot/gpt-4o-mini
-```
+### 控制简体中文
