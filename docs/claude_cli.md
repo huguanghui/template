@@ -125,3 +125,31 @@ claude "以下是最近的内核日志：$LOG。请判断系统是否稳定。"
   ```bash
   sed -n '100,200p' large_driver.c | claude "解释这 100 行代码的作用"
   ```
+
+## window上使用
+
+### 安装
+
+```powershell
+winget install Anthropic.ClaudeCode
+```
+
+cc-switch配置文件
+
+```yaml
+# ~/.claude\settings.json
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
+    "ANTHROPIC_AUTH_TOKEN": "{key}",
+    "ANTHROPIC_MODEL": "deepseek-v4-flash",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek-v4-flash",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek-v4-flash",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek-v4-flash"
+  },
+  "theme": "dark-daltonized",
+  "enabledPlugins": {
+    "pyright-lsp@claude-plugins-official": true
+  }
+}
+```
