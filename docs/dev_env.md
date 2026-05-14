@@ -91,6 +91,36 @@ Linux 端定位为：**高性能编译 + 会话持久化 + 自动化部署**。
 - **eza**: 替代 `ls`。它是 `ls` 的现代化版，支持图标和 Git 状态展示。
 - **delta**: **强烈推荐**。用于 `git diff` 的分页器，让终端里的代码对比比 WinMerge 还直观。
 
+##### delta 安装和配置
+
+```bash
+# windows
+scoop install git-delta
+# linux
+cargo install git-delta
+```
+
+- gitconfig配置
+
+> 编辑你的 ~/.gitconfig (Linux) 或 C:\Users\用户名\.gitconfig (Win
+
+```
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    side-by-side = true    # 开启侧边对比 (如果你屏幕够宽)
+    line-numbers = true    # 显示行号
+    navigate = true        # 开启 n/N 跳转
+    syntax-theme = Monokai Extended # 高亮主题
+
+[merge]
+    conflictstyle = zdiff3 # 增强冲突显示
+```
+
 #### 2. Windows 特有优化
 
 - **Gsudo**: Windows 端的 `sudo`。不用切换管理员窗口，直接 `gsudo nvim`。
