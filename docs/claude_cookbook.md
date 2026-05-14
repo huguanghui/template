@@ -1,5 +1,11 @@
 # Caloude Cookbooks
 
+## 相关链接
+
+<https://github.com/shanraisshan/claude-code-best-practice.git>
+<https://github.com/wasabeef/claude-code-cookbook.git>
+<https://hydrocoderclaud.github.io/claude-code-cookbook/%E5%AD%A6%E4%B9%A0claudecode%E7%BC%96%E7%A8%8B%E7%9A%84%E5%AD%A6%E4%B9%A0%E9%93%BE%E6%8E%A5.html>
+
 ## 简介
 
 **Claude Cookbooks**（<https://github.com/anthropics/claude-cookbooks）是> Anthropic 官方维护的一个代码示例仓库，
