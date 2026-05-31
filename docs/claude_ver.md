@@ -1,5 +1,300 @@
 # Claude版本记录
 
+## 2.1.158
+
+一、主要新功能（New Features）
+
+Auto Mode 正式支持更多平台（核心更新）Auto Mode（自动模式）现在已在以下平台可用：
+Amazon Bedrock
+Google Vertex AI
+Anthropic Foundry
+支持的模型包括：
+Claude Opus 4.7
+Claude Opus 4.8
+开启方式：
+设置环境变量：BashCLAUDE_CODE_ENABLE_AUTO_MODE=1
+
+版本总结
+
+版本类型：功能扩展版本（小更新）
+重要程度：对于使用 Bedrock、Vertex 或 Foundry 部署的企业用户和高级用户非常有价值。
+影响范围：主要影响在云端平台（非直接 Anthropic API）使用 Opus 4.7 / 4.8 的用户。
+其他：本次更新没有新增其他功能、也没有 Bug 修复，仅增加了 Auto Mode 的支持范围。
+
+实际意义
+
+Auto Mode 是 Claude Code 中非常强大的功能，它能让 Claude 自动判断是否需要使用工具、执行代码、创建 Workflow 等，显著提升智能程度和自动化能力。
+此前 Auto Mode 仅在直接使用 Anthropic API 时可用，现在扩展到主流企业级部署平台，方便更多公司用户在生产环境中使用。
+
+## 2.1.157
+
+Claude Code v2.1.157 版本更新记录（简体中文整理分析）
+以下是对 v2.1.157 版本更新内容的结构化翻译 + 分类整理：
+
+一、主要新功能（New Features）
+
+本地 Skills 插件自动加载（重要更新）
+位于 .claude/skills 目录下的插件现在自动加载，无需通过插件市场安装。
+
+插件初始化命令
+新增 claude plugin init <name> 命令，可快速在 .claude/skills 目录下创建新插件脚手架。
+
+插件命令自动补全
+/plugin 命令的参数现在支持自动补全（子命令、已安装插件、市场插件）。
+
+Agents 配置增强
+settings.json 中的 agent 字段现在对 dispatched sessions 生效。
+可使用 --agent <name> 参数进行覆盖。
+
+工作树切换能力
+EnterWorktree 现在支持会话中途切换 Claude 管理的工作树。
+
+遥测增强
+tool_decision 遥测事件在开启 OTEL_LOG_TOOL_DETAILS=1 时，会包含工具参数（bash 命令、MCP/技能名称）。
+
+二、体验与功能优化（Improvements）
+
+Claude 管理的工作树在 Agent 完成后保持解锁状态，方便使用 git worktree remove/prune 清理。
+显著提升长会话和恢复会话的性能（减少重复渲染计算）。
+/terminal-setup 现在默认在 VS Code / Cursor / Windsurf 集成终端中禁用 GPU 加速，防止文字渲染错乱。
+“Feature of the Week” 领取状态移至状态栏显示。
+claude agents 中斜杠命令自动补全支持子字符串匹配。
+新增 /config 设置 “Workflow keyword trigger”，可关闭单词 “workflow” 自动触发动态工作流。
+移除部分启动提示（如沙箱提示、IDE 提示），减少干扰。
+按 Backspace 取消 Workflow 触发请求（与 Alt+W 相同）。
+
+三、Bug 修复（Bug Fixes）
+本次修复内容较多，重点覆盖了后台 Agent、工作树、WSL、终端渲染等方面：
+
+修复粘贴损坏/零字节图片导致请求崩溃的问题。
+修复 Auto 模式和 Bypass-Permissions 模式下仍弹出沙箱网络权限提示的问题。
+修复后台 Agent 完成会话后未正确退休的问题。
+修复 Esc 键无法取消 “opening…” 状态导致列表卡死的问题。
+修复后台工作树在 30 天清理后成为孤儿的问题。
+修复从睡眠唤醒后会话日期错误的问题。
+修复 tmux 中 copy-on-select 无法复制到系统剪贴板的问题。
+修复 --resume 无法显示后台子 Agent 的问题。
+修复 WSL 下图片粘贴、截图粘贴支持问题，并新增从 Windows 资源管理器拖拽图片支持。
+修复多个终端渲染、快捷键、剪贴板相关 Bug。
+修复 VS Code 中 Stop 按钮无法停止后台子 Agent 的问题。
+修复 Opus 4.8 的 Fast Mode 指示器不显示的问题。
+
+版本总结
+v2.1.157 是一个以开发者体验和易用性为主的版本。
+核心亮点：
+
+本地插件系统大幅简化：现在可以直接在 .claude/skills 目录开发和使用插件，无需市场。
+插件开发友好度提升（新增 plugin init + 自动补全）。
+工作树管理和后台 Agent 稳定性继续加强。
+性能和细节体验优化明显，尤其适合长期使用和大项目场景。
+
+建议：
+如果你经常开发自定义 Skills/插件，或者大量使用 Agents 和 Worktree，这个版本值得更新。
+
+## 2.1.156
+
+Claude Code v2.1.156 版本更新记录（简体中文整理）
+
+一、主要更新内容
+这是一个纯 Bug 修复版本，内容非常简洁且针对性强。
+Bug 修复（Bug Fixes）
+
+修复了 Opus 4.8 使用时的一个关键问题：
+当使用 Claude Opus 4.8 模型时，思考块（thinking blocks） 被错误修改，导致向 Anthropic API 发送请求时出现错误。
+
+## 2.1.154
+
+Claude Code v2.1.154 版本更新记录（简体中文整理分析）
+以下是对 v2.1.154 版本更新内容的结构化翻译 + 分类整理：
+
+一、主要新功能（New Features）
+
+Claude Opus 4.8 正式发布（最大亮点）
+Opus 4.8 已上线，默认使用 High Effort（高智能模式）。
+新增 /effort xhigh 指令，可用于最难、最复杂的任务。
+
+动态工作流（Dynamic Workflows） —— 重磅功能
+你可以直接让 Claude 创建一个 Workflow，它会在后台自动编排数十到数百个 Agent 协同工作。
+适合处理大型、复杂任务。
+使用 /workflows 命令可查看所有运行中的 Workflow。
+
+Opus 4.8 Fast Mode 价格大幅降低
+现在只需标准模式 2倍价格，即可获得 2.5倍速度。
+
+精简系统提示（Lean System Prompt）成为默认
+除 Haiku、Sonnet、Opus 4.7 及更早版本外，所有模型默认使用精简系统提示（提升效率）。
+
+Agents 增强
+在 claude agents 中输入 ! <命令>，即可作为一个可随时附着/分离的后台会话执行 Shell 命令。
+等价命令：claude --bg --exec '<command>'。
+
+插件管理优化
+插件可在 plugin.json 中声明 defaultEnabled: false，默认不启用。
+/plugin Discover 标签页会根据当前目录相关性推荐插件，并标注“suggested for this directory”。
+
+二、体验与功能优化（Improvements）
+
+/simplify 命令行为变更：现在只执行清理类审查（复用、简化、效率、抽象层次），不再进行完整的 Bug 狩猎审查。
+/effort 滑块标签从 “Speed/Intelligence” 改为 “Faster/Smarter”，更清晰。
+←← 快捷键打开 Agents 视图，现在在 Bedrock、Vertex、Foundry 以及关闭遥测时均可使用。
+Chrome 浏览器集成：支持通过 /chrome → Select browser… 选择要使用的浏览器。
+Streaming Tool 执行现在默认始终开启（不再受功能旗标限制）。
+/model 选择器在 Fast Mode 开启时会显示对应价格。
+改进自动模式的安全分类器，特别加强了对大批量代码库内容外泄的检测。
+
+三、Bug 修复（Bug Fixes）
+本次修复重点集中在后台工作流、权限控制、安全性和稳定性：
+
+修复 rm -rf $HOME 在 HOME 路径带斜杠时未被正确拦截的问题。
+修复 $TMPDIR 在沙箱与非沙箱命令中解析不一致的问题。
+修复大量后台 Agent（Background Agent）相关问题（固定、卡住、重复启动、CPU 100% 等）。
+修复 Subagent 绕过工作树隔离保护的问题。
+修复 Windows 更新失败时的提示不清晰问题。
+修复 VS Code 扩展关闭时进程未正确清理的问题。
+修复 /mcp 工具列表在工具名过长时的渲染问题。
+修复自动模式在安全分类器 Token 用尽时错误阻挡操作的问题。
+其他终端渲染、快捷键、链接点击、计划文件命名等细节修复。
+
+版本总结
+v2.1.154 是一个重量级功能更新版本，核心亮点如下：
+
+Opus 4.8 正式到来 + Dynamic Workflows（动态工作流）是本次最大升级，极大提升了处理复杂大型任务的能力。
+性能与成本优化显著（Fast Mode 更便宜、精简 Prompt 默认开启）。
+Agents 后台执行能力进一步增强（! 命令非常实用）。
+整体稳定性和安全性继续打磨。
+
+适合人群：重度用户、需要处理大型项目、喜欢使用 Agent 集群和 Workflow 的开发者会获得明显体验提升。
+
+## 2.1.153
+
+以下是对 v2.1.153 版本更新内容的结构化翻译 + 分类整理：
+
+一、主要新功能（New Features）
+
+插件市场 Git 来源优化
+GitHub/Git 插件市场源新增 skipLfs 选项，可在 clone 和 update 时跳过 Git LFS 大文件下载（节省时间和流量）。
+
+npm 全局安装提示
+当 npm 全局安装无法自动更新时，Claude Code 会显示一次性提示。
+/doctor 命令会列出对应的修复建议。
+
+Status Line 命令增强
+Status line 脚本现在会收到 COLUMNS 和 LINES 环境变量，脚本可根据终端实际宽高调整输出格式。
+
+Agents 功能改进
+claude agents 的 dispatch 输入自动补全现在会建议原生斜杠命令和内置技能，不再仅限于项目技能。
+PR 列显示优化：单个 PR 显示 PR #N，多个 PR 显示 N PRs。
+
+诊断工具增强
+claude doctor 现在会显示你上一次更新的结果。
+
+认证提示合并
+将 MCP Servers 和 Connectors 分别的“需要认证”启动通知合并为一条消息，避免重复。
+
+macOS 后台 Agent 改进
+后台 Agent 在「隐私与安全性」中统一显示为 “Claude Code”。
+升级后权限授予继续有效。
+
+二、体验与功能优化（Improvements）
+
+模型选择记忆：
+/model 命令现在会保存你的选择作为新会话默认模型（与 IDE 行为一致）。
+在模型选择器中按 s 键仅切换当前会话模型（不再是 d）。
+
+键位绑定提醒：
+如果你自定义过 modelPicker:setAsDefault，需修改为 modelPicker:thisSessionOnly。
+
+三、Bug 修复（Bug Fixes）
+本次修复数量较多，重点集中在后台会话（Background Sessions）、MCP Servers 和 Windows 稳定性上：
+
+修复了 v2.1.147 引入的 stateful MCP 服务器 reconnect 循环问题。
+修复自定义 API Gateway 可能收到用户 OAuth 凭证而不是网关自身 Token 的回归 Bug。
+修复 Subagent（Agent Tool）在多种模式下忽略 --strict-mcp-config 等配置的问题。
+修复 Windows PowerShell 安装器失败时仍显示“安装完成”的问题。
+修复 claude update 在 npm 安装时总是安装最新版而非指定通道版本的问题。
+修复通过 transcript 文件路径恢复超多会话时内存占用过高（数 GB）的问题。
+修复大量后台会话（background agent）相关 Bug：
+僵尸会话、状态不同步、剪贴板失效、链接不可点击、键盘快捷键失效等。
+修复 Windows 下 IME 候选框位置错误、颜色溢出等问题。
+
+修复 /bg 在模型回复中途执行时的行为问题。
+修复 Agent 在临时工作树中可能丢失输出的问题。
+修复 VSCode 扩展在 Windows 上关闭时进程未正确退出的问题。
+修复 Windows 更新失败后的回滚机制，现在会正确恢复原始可执行文件。
+
+版本总结
+v2.1.153 版本重点：
+
+插件市场和 Git 集成更灵活（新增 skipLfs）。
+后台 Agent 和长期会话稳定性大幅提升（修复了大量相关 Bug）。
+用户体验细节优化（模型默认设置、状态栏适配、提示合并）。
+安装与更新流程更可靠（尤其是 npm 和 Windows 用户）。
+
+## 2.1.152
+
+Claude Code v2.1.152 版本更新记录（简体中文整理分析）
+以下是对该版本更新内容的结构化翻译 + 分类整理，方便阅读和理解：
+
+一、主要新功能（New Features）
+
+代码审查增强
+/code-review --fix 现在支持自动应用审查意见到工作区文件。
+会给出代码复用、简化、效率优化等建议。
+/simplify 命令现在会调用 /code-review --fix 执行简化。
+
+Skills（技能）能力提升
+Skills 和斜杠命令（slash commands）现在可以在 frontmatter 中设置 disallowed-tools，可在技能激活期间禁用特定工具。
+新增 /reload-skills 命令，可在不重启会话的情况下重新扫描技能目录。
+SessionStart Hook 新增 reloadSkills: true 支持，让 Hook 安装的技能可立即在当前会话生效。
+SessionStart Hook 可设置会话标题（sessionTitle）。
+
+Hook 机制扩展
+新增 MessageDisplay Hook 事件，允许 Hook 在显示助手消息时进行转换或隐藏。
+
+插件市场管理增强
+新增 pluginSuggestionMarketplaces 设置，管理员可白名单允许被推荐的组织插件市场。
+claude plugin marketplace remove 命令新增 --scope 参数（user|project|local），与 add/install 等命令保持一致。
+
+模型容错改进
+当主模型不可用时，自动切换到配置的 --fallback-model，并在本次会话剩余时间内持续使用，而非每次请求都失败。
+
+二、体验与功能优化（Improvements）
+
+Auto 模式：不再需要手动确认同意即可使用。
+Vim 模式：在 NORMAL 模式下按 / 现在会打开反向历史搜索（类似 bash/zsh 的 Ctrl+R）。
+用量统计：/usage 命令现在会包含大型会话文件，并采用流式读取，内存占用保持平稳。
+思考过程显示优化：
+折叠的思考摘要现在至少显示 3 秒，支持 Markdown 渲染，最多显示 10 行（Ctrl+O 显示完整内容）。
+全屏模式下，“Thinking for Ns” 指示器会实时计数，并在思考被中断时保留数值。
+
+Workflow 工具：简化了进度显示，实时 Agent 数量仅在下方持久状态栏显示。
+响应计时器：当有后台 Agent 或 Workflow 运行时，会显示等待提示，完成后显示累计时间。
+
+三、Bug 修复（Bug Fixes）
+较多且重要的修复包括：
+
+修复长时间会话中终端样式退化的问题。
+修复 Sandbox 警告在精简启动模式下不显示的问题。
+修复加载 spinner 在工具运行时错误显示“仍在思考”的问题。
+修复 Focus 模式下错误显示“隐藏消息数量”的问题。
+修复点击工具结果中的链接时错误折叠区域的问题。
+修复 Markdown 表格样式问题（边框、换行、空表头等）。
+修复相同命令但不同环境变量的 MCP 服务器被错误去重的问题。
+修复 /doctor 命令对已删除插件/市场的错误报告。
+修复 Git 分支跟踪的插件无法更新问题。
+修复远程 MCP 服务器在启用出口代理时的连接失败问题。
+修复多个边缘场景下的崩溃和卡死问题（Agent 取消、权限提示、缓存统计等）。
+
+版本总结
+本次更新重点：
+
+大幅增强代码审查和自动修复能力（/code-review --fix 是亮点）
+显著提升 Skills / Hook 的灵活性和可扩展性
+改善长时间会话的稳定性和使用体验
+修复了较多实用 Bug，整体稳定性提升
+
+适合人群：重度使用 Claude Code 进行代码开发、Agent 构建和长期会话的用户会明显受益。
+
 ## 2.1.150
 
 以下是 **v2.1.150** 版本的更新内容整理（简体中文）：
