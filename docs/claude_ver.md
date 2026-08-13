@@ -1,5 +1,202 @@
 # Claude版本记录
 
+## 总览
+
+| 版本        | 重心                                                                      |
+| ----------- | ------------------------------------------------------------------------- |
+| **2.1.229** | 网关稳定性、插件 marketplace、大量崩溃与路径修复、工作流前缀优化          |
+| **2.1.228** | TUI/会话可靠性、Remote Control、插件与技能加固、跨会话消息展示            |
+| **2.1.227** | 订阅档位判断、GitHub Action、TUI/菜单与性能小修                           |
+| **2.1.226** | 常规缺陷与稳定性（无细项列表）                                            |
+| **2.1.225** | 用量上限提示、信任提示、OAuth/Remote/跨会话、VS Code Focus                |
+| **2.1.224** | **自托管 runner**、插件 archive 源、沙箱与跨会话消息、Remote Control 体验 |
+
+---
+
+## 2.1.229
+
+### 新增
+
+- 文档：`claude remote-control --continue` 可恢复最近一次 Remote Control 会话
+- 自托管 runner：支持服务端下发的 Claude Code hooks（与托管环境一致）
+- 网关流式响应：长思考时发 **SSE keepalive**，降低 Vertex/Bedrock 空闲断连
+- 插件 marketplace 支持 **`command` 源**（本地命令输出插件目录，每会话重解析；`mode: "link"` 可直接链接使用）
+- `ListAgents`：断线的 Remote Control 标为 `offline`，云端会话标为 `cloud`
+
+### 修复
+
+- 长回复流式输出时部分消失、终端重复打印
+- 工具参数 `glob` / `file_path` / `command` 非字符串时崩溃（含 `--resume`）
+- 极窄终端下进度条/表格触发 `RangeError`（也可搞挂 `--continue` / `--resume`）
+- Windows 上扩展路径（`\\?\`）或 UNC 路径导致崩溃
+- 关闭 attribution 头时 auto mode 每次工具调用失败
+- 自定义 `ANTHROPIC_BASE_URL` 下 `/model` 拒绝 Sonnet/Opus 1M（claude.ai 订阅用户）
+- MCP OAuth：回调改用 `127.0.0.1` 替代 `localhost`，兼容严格授权服务器
+- Remote Control：笔记本终端输入斜杠命令后客户端转圈卡死
+- `/install-github-app` 生成的 Code Review 工作流未在 PR 上发评论
+- IDE 连接时，含大量 diagnostics 的文件编辑后 UI 卡顿数秒
+- 一次性 `claude plugin` 命令残留 liveness 文件，阻碍清理旧插件
+- 限 CPU 容器内动态工作流误用宿主机核心数
+- 原子替换文件后文件监视句柄泄漏；Windows 上网络/虚拟盘监视失败未捕获错误
+- SDK / `--input-format stream-json` 提交纯空白消息导致 API 400
+- 仅消息就超 API 32MB 时反复无效 compaction → 改为明确失败一次
+- Desktop 经托管网关导出 OpenTelemetry 被拒
+- 部署了 `managed-mcp.json` 时自托管/远程会话启动即退出 → 跳过并警告
+- 自托管 runner 准备仓库时卡在 Git Credential Manager → 无凭据时快速失败
+
+### 改进与变更
+
+- 工作流 fan-out：同前缀子 agent 错峰启动，复用缓存前缀（`CLAUDE_CODE_WORKFLOW_PREFIX_STAGGER_MS=0` 可关）
+- “prompt is too long” 更清楚说明为何无法自动 compaction
+- 沙箱：域名列表中的 IPv6 加括号；歧义写法默认收紧，并由 `/doctor` 标出
+- `/login` 成功后再次提示 `CLAUDE_CODE_OAUTH_TOKEN` 覆盖风险
+- `/commit-push-pr`：带 `--force` / `--amend` / `--no-verify` 等危险参数的 git/gh **不再自动批准**
+- 自托管 runner（Windows）启动必须显式 `--base-dir`
+- **VS Code**：反馈走内置对话框；`/btw` 面板可拖拽改大小；侧栏支持会话分组
+
+---
+
+## 2.1.228
+
+### 修复
+
+- 交互会话偶发完全不重绘但进程仍在
+- Windows：从 git 安装目录的父目录启动时找不到 git / Git Bash
+- `/tui` 在 `/model` 切换后把会话模型还原成旧模型
+- 安装/升级后首个会话跨会话消息有时无 inbox
+- Remote Control `/resume` 把已恢复会话的标题/历史泄漏进当前连接会话
+- 自托管 runner：`checkout` 钩子对不推送的仓库失败导致整场失败 → 跳过并警告
+- 后台任务结束与下一轮之间会话被误结束
+- 会话清理误删项目 memory 目录内容
+- 插件缓存清理误删「仅有符号链接开发版」的插件缓存
+- 设置合并：高优先级 marketplace 条目不再错误继承其它层自定义 headers
+- skill 调用后 deferred-tools 提醒偶发发给模型两次
+
+### 改进与变更
+
+- 从 claude.ai 同步的 skills：不再覆盖本地命令/MCP prompts；描述消毒并标注；本机不执行 `!`、不展开 `@` 文件
+- 跨会话消息：发送者与正文内联显示；发往其它机器 Remote Control 时显示会话名
+- Vertex：凭证过期/缺失数秒内失败，不再重试数分钟
+- compaction 进度：重试倒计时与卡住提示在压缩过程中可见
+- 终端标题 busy 动画字形调整，减轻部分终端标签栏抖动
+- Write 工具：新模型可不先 Read 就覆盖本会话未读过的已有文件（旧模型仍需先读）
+- 去掉 Pro/Max/Team 首次使用关于 auto mode 略贵的过时说明
+
+---
+
+## 2.1.227
+
+### 修复
+
+- 登录 token 过期启动时 feature flag 未带订阅档位，可能误推 Max 用户开 Fable 用量点
+- `claude-code-action` 在 GitHub-hosted runner 上因 `allowed_non_write_users` 导致所有 Bash 失败
+- `/tui` 恢复到「第一条消息之前」的异常会话状态
+
+### 改进
+
+- 斜杠命令菜单：仅选中行蓝色、匹配字加粗，emoji/重音名显示正常
+- 性能：文件不存在建议、@ 提及大小检查减少事件循环卡顿
+
+---
+
+## 2.1.226
+
+- 缺陷修复与可靠性提升（无公开细项）
+
+---
+
+## 2.1.225
+
+### 新增
+
+- 网关 **spend-limit** 纳入用量警告（需网关 ≥ 2.1.225）
+- `claude agents` 对不信任目录增加工作区信任提示（与 `claude` 一致）
+
+### 修复
+
+- 长效 `CLAUDE_CODE_OAUTH_TOKEN` 被短效登录 token 短暂替换导致无头会话 401
+- macOS MCP OAuth 钥匙串超时后间歇性大量 401
+- auto mode：安全策略拒绝权限检查本身不再计入连续拦截上限
+- 无头/启动阶段跨会话消息积压无提示、无过期
+- Remote Control 恢复超大已压缩会话时历史损坏
+- agents 列表悬停其它项目会话会改变下一 agent 启动目录
+- 自托管 runner：`--base-dir` 不可写时启动即注册失败 → 启动期明确报错退出
+- Web 会话被误判卡住，重连反复重发事件积压
+
+### 改进
+
+- Remote Control：App 附件图片直接可见，不必再走读盘工具
+- **VS Code Focus**：不再错误折叠最新待办/提问上下文；纯思考折叠显示耗时
+- `SendMessage` 可按名称向其它机器上的 Remote Control 会话发起对话
+- `SendMessage`：已确认的 Remote Control 收件人不会被本机同名会话顶替
+
+---
+
+## 2.1.224（功能跨度最大）
+
+### 新增
+
+- **`claude self-hosted-runner`**：自有机器/容器承接 Web/移动/桌面会话（Team/Enterprise）
+- 插件 **`archive` 源**：HTTPS zip 安装，可选 SHA-256，无需 git/npm
+- 粘贴不可用时移除会先取消并确认
+- **`ANTHROPIC_BEDROCK_REGION_PREFIX`**：指定 Bedrock 跨区推理前缀
+- **`crossSessionInbound` / `dialogExpiry`**：跨会话消息在 bypass 权限下可暂扣审批；其它会话可自动投递
+- 沙箱凭证掩码增强：`extract`、`onExtractNoMatch`、JWT `maskClaims`、AWS SigV4 等（需 TLS terminate，且仅用户/托管/`--settings`）
+- **跨会话 `SendMessage` + `ListAgents`**（macOS / Linux）
+
+### 修复（摘要）
+
+- 超长项目路径导致会话目录串项目
+- `SendMessage` 写入失败仍报成功
+- 沙箱 deny 路径尾部 `/` 在 Linux/macOS 可被绕过
+- 沙箱违规详情未进入 Bash 结果
+- 回合中途接入的 MCP 工具被推迟且未告知模型
+- 多项目安装同一插件时安装记录损坏
+- 恢复粘贴内容偶发错附/丢字
+- Wayland 选中复制竞态
+- 长会话反馈问卷分享失败却显示成功
+- Remote Control 冷启动凭证陈旧导致自动启动失败
+- `/clear` 后 Remote/SDK 客户端出现空白 “(no content)”
+- 服务端会话过期重建后误上传本地旧历史
+- 多处 Remote Control / VS Code 连接状态与 resume 误重连问题
+
+### 改进与变更
+
+- 全屏模式多次 compaction 仍保留完整滚动历史
+- Remote：客户端可见 compaction 进度与边界；`/clear` 同步到已连接客户端
+- Remote 连接失败：持久失败指示 + 重连快捷方式（不再仅 8 秒 toast）
+- **取消每会话 200 子 agent 上限**（并发/深度限制仍在）
+- 托管设置：组织设置未变时登录/切组织不再反复审批弹窗
+- 反馈问卷同意后可上传最近一次请求的模型设置（含 system/`CLAUDE.md` 等，密钥仍脱敏）
+- Bash 工具说明：明确输出主要给模型看
+- 粘贴占位编号在采纳时重编号
+- Remote：compaction/`/resume` 后新建会话时归档僵死服务端会话
+
+---
+
+## 跨版本主题归纳
+
+| 主题               | 代表变化                                                                       |
+| ------------------ | ------------------------------------------------------------------------------ |
+| **自托管 / 远程**  | 224 引入 self-hosted-runner；后续多轮修 checkout、base-dir、凭证、会话生命周期 |
+| **Remote Control** | 连接状态、resume 泄漏、附件、跨机 SendMessage、compaction 可见性               |
+| **跨会话通信**     | SendMessage、ListAgents、inbox、展示与误投递修复                               |
+| **稳定性**         | 流式输出、窄终端、Windows 路径、TUI 不重绘、UI 卡顿                            |
+| **安全与权限**     | auto mode、危险 git 参数、沙箱 deny/掩码、skills 加固                          |
+| **插件**           | archive / command 源、缓存清理、安装记录                                       |
+| **VS Code**        | 会话分组、`/btw` 可调、Focus 折叠、反馈入口                                    |
+
+---
+
+## 若你只关心升级影响
+
+- **用自托管 runner / Remote Control / 跨会话消息** → 建议升到 **2.1.229**，中间修复很多。
+- **Windows** → 关注 git 发现、扩展路径崩溃、runner 必须 `--base-dir`。
+- **走网关 / Vertex / Bedrock** → 229 的 SSE keepalive、225 用量上限提示、228 Vertex 凭证失败更快。
+- **依赖 `/commit-push-pr` 自动批准** → 229 起危险 git 参数不再自动过。
+
+如需把以上内容压成「一页中文更新说明」或「按运维/开发/VS Code 三套升级笔记」，可以说明用途我按那一版再压一稿。
+
 ## 2.1.223
 
 ### **新增**
