@@ -139,18 +139,17 @@ cc-switch配置文件
 ```yaml
 # ~/.claude\settings.json
 {
-  "env": {
-    "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
-    "ANTHROPIC_AUTH_TOKEN": "{key}",
-    "ANTHROPIC_MODEL": "deepseek-v4-flash",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek-v4-flash",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek-v4-flash",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek-v4-flash"
-  },
+  "env":
+    {
+      "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
+      "ANTHROPIC_AUTH_TOKEN": "{key}",
+      "ANTHROPIC_MODEL": "deepseek-v4-flash",
+      "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek-v4-flash",
+      "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek-v4-flash",
+      "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek-v4-flash",
+    },
   "theme": "dark-daltonized",
-  "enabledPlugins": {
-    "pyright-lsp@claude-plugins-official": true
-  }
+  "enabledPlugins": { "pyright-lsp@claude-plugins-official": true },
 }
 ```
 
@@ -172,7 +171,6 @@ description: 用“类比 + ASCII 图”解释代码。适用于讲解代码库�
 4. **指出陷阱**：常见的错误或误解是什么？
 
 保持解释口语化。对于复杂概念，使用多个类比。
-
 ```
 
 ## subagent使用
@@ -180,3 +178,11 @@ description: 用“类比 + ASCII 图”解释代码。适用于讲解代码库�
 ## Hooks系统
 
 ## 插件
+
+## 使用技巧
+
+### 状态栏显示token
+
+```
+/statusline show model name, context percentage, input and output tokens
+```
