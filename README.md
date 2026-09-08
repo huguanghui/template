@@ -83,3 +83,5 @@ ssr://NDUuODIuMjU1LjExNTo1OTMzOm9yaWdpbjpyYzQ6cGxhaW46Ykc1amJpNXZjbWNnTW5Jei8_b2
 ssr://NDUuMTIuMTA5LjEzNDo1OTMzOm9yaWdpbjpyYzQ6cGxhaW46Ykc1amJpNXZjbWNnTW5Jei8_b2Jmc3BhcmFtPSZyZW1hcmtzPTVyU2I1cDJKNTUtMlNBJmdyb3VwPVRHNWpiaTV2Y21j
 
 https://www.baacloud11.com/modules/index.php
+
+curl -O -L "https://github.com/anthropics/claude-code/releases/download/v2.1.229/claude-linux-x64.tar.gz"
