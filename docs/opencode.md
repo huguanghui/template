@@ -31,5 +31,10 @@ curl -fsSL https://opencode.ai/v2/install | bash
 - **重视流程规范和代码审查**：`Jonathan0823` 的方案更合适。
 - **想学习高级用法，自己定制**：从 `markerikson` 的示例入手。
 
-
 ### 启用LSP
+
+### WebUI使用
+
+```bash
+OPENCODE_SERVER_PASSWORD=12345678 opencode2 serve --port 4096 --hostname 0.0.0.0
+```
