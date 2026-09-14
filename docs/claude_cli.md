@@ -186,3 +186,57 @@ description: 用“类比 + ASCII 图”解释代码。适用于讲解代码库�
 ```
 /statusline show model name, context percentage, input and output tokens
 ```
+
+**Claude Code 官方目前没有内置类似 Pi 的 `/tree` 命令**，无法直接在会话中以树形结构查看/导航对话分支。
+
+### 官方已有的相关功能
+
+Claude Code 的会话是基于 JSONL 存储的（带 `uuid` / `parentUuid` 链），支持分支，但可视化较弱：
+
+| 命令                           | 作用                                                                 |
+| ------------------------------ | -------------------------------------------------------------------- |
+| `/rewind` 或连续按 `Esc Esc`   | 回退到之前的消息点，从那里重新继续（类似时间旅行，会丢弃之后的消息） |
+| `/fork`                        | 从当前点创建新会话分支                                               |
+| `/branch`                      | 分支当前会话                                                         |
+| `/resume` 或 `claude --resume` | 会话选择器（扁平列表，可按项目/worktree 过滤）                       |
+| `/export`                      | 导出当前对话为文本                                                   |
+
+官方文档和 issue 中有人请求类似 `/session-tree` 的可视化功能（显示 fork 层级），但截至目前仍未内置。
+
+### 最接近 Pi `/tree` 的解决方案（社区工具）
+
+**推荐：`cctree`（claude-code-tree）**
+
+它专门读取 Claude Code 的 session JSONL，从 `uuid`/`parentUuid` 构建对话树，并提供类似 Pi 的体验：
+
+1. **在 Claude Code 会话内使用**：
+   - 安装后，直接输入 `/tree`
+   - 会渲染带编号的对话树（用户/助手消息）
+   - 可以指定 “fork from X” 从任意节点分支
+   - 新分支可用 `/resume <id>` 切换
+
+2. **独立 TUI 模式**：
+
+   ```bash
+   python -m cctree --session-file path/to/session.jsonl
+   # 或自动检测当前 session
+   python -m cctree
+   ```
+
+   支持键盘导航（↑↓ 选择节点、←→ 折叠/展开、f 从选中节点 fork 等）。
+
+仓库：<https://github.com/SarthakB11/claude-code-tree>
+
+### 其他相关工具
+
+- **ccfullsearch (`ccs`)**：强大的 session 搜索 + 树视图（`ccs --tree <session-id>`），支持从树中某个消息 resume/fork。
+- **sessiontree**：跨 harness（Claude Code / Codex / OpenCode / Pi 等）的 fork 树查看器，可直接 resume 节点。
+- **claude-history**：有 `tree` 子命令显示 agent 层级。
+
+### 总结
+
+- 想要**会话内即时树形导航**（最接近 Pi `/tree`）→ 用 **cctree**。
+- 只想回退重试 → 直接用官方 `/rewind`。
+- 想看多个 session 之间的 fork 关系 → 用 `sessiontree` 或社区 skill。
+
+如果你需要具体安装步骤或某个工具的详细用法，可以告诉我。
