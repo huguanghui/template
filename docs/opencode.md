@@ -38,3 +38,8 @@ curl -fsSL https://opencode.ai/v2/install | bash
 ```bash
 OPENCODE_SERVER_PASSWORD=12345678 opencode2 serve --port 4096 --hostname 0.0.0.0
 ```
+
+## 插件
+
+@tarquinen/opencode-dcp
+smart-codebase
